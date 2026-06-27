@@ -1,2 +1,2 @@
 # GlobeTrek-
-GlobeTrek Adventure
+GlobeTrek Adventures
