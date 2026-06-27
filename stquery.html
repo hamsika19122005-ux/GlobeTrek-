@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Queries | GlobeTrek Admin Portal</title>
+    <link rel="stylesheet" href="st3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-panel-body">
+
+    <header class="admin-top-bar">
+        <div class="admin-logo">
+            <h2>GlobeTrek <span>Admin Portal</span></h2>
+        </div>
+        <div class="admin-user-profile">
+            <span class="role-badge">Role: Administrator</span>
+        </div>
+    </header>
+
+    <div class="admin-workspace">
+        
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item">
+                    <span class="menu-icon">📊</span> Dashboard Home
+                </a>
+                <a href="stmanage.html" class="menu-item">
+                    <span class="menu-icon">📦</span> Manage Packages
+                </a>
+                <a href="stsystem.html" class="menu-item">
+                    <span class="menu-icon">🛒</span> System Bookings
+                </a>
+                <a href="stquery.html" class="menu-item active">
+                    <span class="menu-icon">💬</span> User Queries <span class="badge-count">9</span>
+                </a>
+                <a href="staccount.html" class="menu-item">
+                    <span class="menu-icon">👥</span> Staff Accounts
+                </a>
+                <a href="streport.html" class="menu-item">
+                    <span class="menu-icon">📈</span> Generate Reports
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-link">🚪 Secure Logout</a>
+            </div>
+        </aside>
+
+        <main class="admin-main-content">
+            
+            <div class="admin-navigation-row">
+                <a href="admin.html" class="btn-back-dashboard">
+                    <span class="back-arrow">←</span> Back to Dashboard
+                </a>
+                <div class="table-utility-filters">
+                    <select class="table-sort-select">
+                        <option value="all">All Queries</option>
+                        <option value="urgent">Urgent Only</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="management-workspace-card">
+                <div class="card-title-header">
+                    <h3>Customer Support Inbox & Inquiries</h3>
+                    <p>Review contact form submissions, address traveler questions, and update resolution statuses.</p>
+                </div>
+
+                <div class="table-responsive-wrapper">
+                    <table class="inventory-data-table">
+                        <thead>
+                            <tr>
+                                <th>Date Received</th>
+                                <th>Sender Details</th>
+                                <th>Subject / Topic</th>
+                                <th>Message Preview</th>
+                                <th>Priority Tag</th>
+                                <th style="text-align: center;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="query-date">Today, 10:14 AM</td>
+                                <td>
+                                    <div class="sender-info">
+                                        <strong>Ramesh Kumar</strong>
+                                        <span>ramesh@email.com</span>
+                                    </div>
+                                </td>
+                                <td><span class="subject-text">Ella Train Booking Issue</span></td>
+                                <td class="message-preview">Can I reschedule my Ella tour train ticket from morning to afternoon session...</td>
+                                <td><span class="query-badge query-urgent">URGENT</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-reply">Open</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="query-date">Yesterday</td>
+                                <td>
+                                    <div class="sender-info">
+                                        <strong>Elena Rostova</strong>
+                                        <span>elena.ros@email.com</span>
+                                    </div>
+                                </td>
+                                <td><span class="subject-text">Custom Group Surcharges</span></td>
+                                <td class="message-preview">We are looking to book the Coastal Escape package for a corporate group of 15...</td>
+                                <td><span class="query-badge query-pending">PENDING</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-reply">Open</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="query-date">09/06/2026</td>
+                                <td>
+                                    <div class="sender-info">
+                                        <strong>David Miller</strong>
+                                        <span>david@email.com</span>
+                                    </div>
+                                </td>
+                                <td><span class="subject-text">Refund Confirmation</span></td>
+                                <td class="message-preview">Thank you for processing my cancellation request. How long will the refund take...</td>
+                                <td><span class="query-badge query-resolved">RESOLVED</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-reply">Open</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

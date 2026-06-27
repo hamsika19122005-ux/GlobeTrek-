@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="style7.css">
+    <!—Google Fonts for professional typography 
+    <link href=https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap rel=”stylesheet”>
+</head>
+<body class="auth-page-body">
+
+    <!—Header Navigation Bar (Matches all existing subpages perfectly) 
+    <header class="main-header">
+        <div class="logo">
+            <h2>GlobeTrek<span> Adventures</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="package.html">Tour Packages</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-secondary">Login</a>
+            <a href="register.html" class="btn-primary active-auth">Register</a>
+        </div>
+    </header>
+
+    <!—Centered Onboarding Card Portal Container 
+    <main class="auth-wrapper">
+        <div class="auth-card reg-card-wide">
+            
+            <!—Top Heading Context 
+            <div class="auth-card-header">
+                <h2>Create Your Account</h2>
+                <p>Join GlobeTrek Adventures to book custom itineraries and manage your journeys.</p>
+            </div>
+
+            <!—Frontend Mismatch/Validation Alert State Simulator (Hidden by default) 
+            <div class="auth-error-banner" id="regErrorBanner" style="display: none;">
+                ⚠️ Passwords do not match. Please verify your security credentials.
+            </div>
+
+            <!—Registration Form Controls 
+            <form action="#" method="POST" id="registerForm" class="auth-form">
+                
+                <!—Double Input Row: First & Last Name 
+                <div class="form-input-row">
+                    <div class="auth-field-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" placeholder="John" required>
+                    </div>
+                    <div class="auth-field-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <!—Double Input Row: Username & Phone 
+                <div class="form-input-row">
+                    <div class="auth-field-group">
+                        <label for="regUsername">Username *</label>
+                        <input type="text" id="regUsername" placeholder="johndoe99" required>
+                    </div>
+                    <div class="auth-field-group">
+                        <label for="regPhone">Mobile Number *</label>
+                        <input type="tel" id="regPhone" placeholder="+94 77 123 4567" required>
+                    </div>
+                </div>
+
+                <!—Full Width Input: Email Address 
+                <div class="auth-field-group">
+                    <label for="regEmail">Email Address *</label>
+                    <div class="input-with-icon">
+                        <span class="field-icon">✉️</span>
+                        <input type="email" id="regEmail" placeholder=john@example.com required>
+                    </div>
+                </div>
+
+                <!—Double Input Row: Password and Confirmation 
+                <div class="form-input-row">
+                    <div class="auth-field-group">
+                        <label for="regPassword">Password *</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">🔒</span>
+                            <input type="password" id="regPassword" placeholder="Minimum 8 characters" oninput="checkPasswordStrength()" required>
+                        </div>
+                        <!—Password Strength Track UI Element 
+                        <div class="strength-meter-container">
+                            <div id="strengthMeterBar" class="strength-bar"></div>
+                        </div>
+                    </div>
+                    <div class="auth-field-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">🔒</span>
+                            <input type="password" id="confirmPassword" placeholder="Repeat secure password" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!—Terms and Conditions Checkbox Constraint 
+                <div class="auth-meta-options">
+                    <label class="remember-me-checkbox">
+                        <input type="checkbox" id="termsAgreement" required>
+                        <span class="terms-text">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> of GlobeTrek Adventures.</span>
+                    </label>
+                </div>
+
+                <!—Primary Form Submission Action Trigger Button 
+                <button type="submit" class="btn-submit-auth">CREATE MY ACCOUNT</button>
+            </form>
+
+            <!—Bottom Redirect Context Link 
+            <div class="auth-card-footer">
+                <p>Already have a traveler account? <a href="login.html">Sign In Here</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <!—Footer System Layout (Matches homepage layout seamlessly) 
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>&copy; 2026 GlobeTrek Adventures. All Rights Reserved.</p>
+        </div>
+        <div class="footer-badges">
+            <span>🛡️ SSL Secured Transactions</span>
+            <span>♿ WCAG Accessible Layout</span>
+        </div>
+    </footer>
+
+    <!—Basic Client-Side Password Strength Interactive Simulator Block ->
+    <script>
+    function checkPasswordStrength() {
+            const password = document.getElementById('regPassword').value;
+            const meter = document.getElementById('strengthMeterBar');
+            
+            if (password.length === 0) {
+                
+                meter.className = "strength-bar";
+            } else if (password.length < 5) {
+                
+                meter.className = "strength-bar weak";
+            } else if (password.length < 8) {
+                
+                meter.className = "strength-bar medium";
+            } else {
+                
+                meter.className = "strength-bar strong";
+            }
+        }
+    </script>
+</body>
+</html>

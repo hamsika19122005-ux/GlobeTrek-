@@ -1,0 +1,359 @@
+/* ==========================================================================
+   23. SYSTEM BOOKINGS MANAGEMENT UTILITIES & FILTERS
+   ========================================================================== */
+/* ==========================================================================
+   20. MASTER ADMINISTRATIVE WORKSPACE STYLES (ADMIN PORTAL)
+   ========================================================================== */
+.admin-panel-body {
+    background-color: #EAEFF2; /* Exact clean light gray color behind dashboard elements */
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header Navbar for Admin Panel */
+.admin-top-bar {
+    background-color: #005F73; /* Your deep signature teal */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    height: 60px;
+}
+
+.admin-logo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.admin-logo h2 span {
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.role-badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.82rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Screen Matrix Split System */
+.admin-workspace {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+/* Sidebar navigation tray */
+.admin-sidebar {
+    width: 260px;
+    background-color: #202430; /* Rich slate dark color from your sidebar screenshot */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    color: #A0AEC0;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    color: #FFFFFF;
+    background-color: #2D3243;
+}
+
+.menu-item.active {
+    border-left-color: #D67D00; /* Warm accent indicator border strip line */
+}
+
+.menu-icon {
+    margin-right: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.badge-count {
+    background-color: #E53E3E;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 10px;
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.sidebar-bottom {
+    padding: 1.5rem;
+    border-top: 1px solid #2D3243;
+}
+
+.logout-link {
+    color: #FEB2B2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Content Container Area */
+.admin-main-content {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ==========================================================================
+   21. BACK BUTTON & NAVIGATION STYLING
+   ========================================================================== */
+.admin-navigation-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* The custom request back link navigation button styled clean and distinct */
+.btn-back-dashboard {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #1E293B;
+    border: 1px solid #CBD5E1;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-back-dashboard:hover {
+    background-color: #F8FAFC;
+    border-color: #94A3B8;
+}
+
+.back-arrow {
+    margin-right: 0.5rem;
+    font-weight: 700;
+}
+
+/* Primary + Add Package Button Action */
+.btn-add-package-teal {
+    background-color: #0F4C5C; /* Dark teal custom accent matching your grid button layout */
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 1.25rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+}
+
+.btn-add-package-teal:hover {
+    background-color: #0A343D;
+}
+
+/* ==========================================================================
+   22. DATA MATRIX INVENTORY TABLES
+   ========================================================================== */
+.management-workspace-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.card-title-header {
+    margin-bottom: 2rem;
+}
+
+.card-title-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #1E293B;
+    margin-bottom: 0.4rem;
+}
+
+.card-title-header p {
+    font-size: 0.88rem;
+    color: #64748B;
+}
+
+.table-responsive-wrapper {
+    overflow-x: auto;
+}
+
+.inventory-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+
+.inventory-data-table th {
+    background-color: #F8FAFC;
+    color: #64748B;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 1rem;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.inventory-data-table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #E2E8F0;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.table-price {
+    font-weight: 500;
+}
+
+/* Status Indicator Pill badges matching your dashboard snapshot colors */
+.status-indicator {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+}
+
+.active-tag {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+
+.draft-tag {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+/* Action controls cells */
+.actions-cell-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-table-edit, .btn-table-del {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    color: #475569;
+}
+
+.btn-table-edit:hover {
+    background-color: #F1F5F9;
+    color: #1E293B;
+}
+
+.btn-table-del:hover {
+    background-color: #FFEEEE;
+    border-color: #FCA5A5;
+    color: #C53030;
+}
+
+
+.table-utility-filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.table-search-input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    width: 240px;
+    outline: none;
+    background-color: #FFFFFF;
+    transition: border-color 0.2s;
+}
+
+.table-search-input:focus {
+    border-color: #005F73;
+}
+
+/* Tour Lifecycle Contextual Indicators */
+.tour-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.upcoming-tag {
+    background-color: #EFF6FF;
+    color: #1D4ED8;
+}
+
+.upcoming-tag::before {
+    content: "🔵";
+    font-size: 0.6rem;
+}
+
+.progress-tag {
+    background-color: #FFFBEB;
+    color: #B45309;
+}
+
+.progress-tag::before {
+    content: "🟡";
+    font-size: 0.6rem;
+}
+
+.complete-tag {
+    background-color: #F0FDF4;
+    color: #15803D;
+}
+
+.complete-tag::before {
+    content: "🟢";
+    font-size: 0.6rem;
+}
+
+/* Manifest Quick Action Entry Triggers */
+.btn-table-view {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1px solid #005F73;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #005F73;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-table-view:hover {
+    background-color: #005F73;
+    color: #FFFFFF;
+}

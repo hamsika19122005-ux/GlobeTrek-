@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Travel Inquiry | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="quer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="customer-portal-body">
+
+    <div class="login-gateway-container" style="margin-top: 5vh;">
+        <div class="login-card-workspace">
+            
+            <div class="login-card-header">
+                <h2>Traveler Assistance Desk</h2>
+                <p>Have operational questions regarding your booking itinerary? Drop a line and our agents will respond shortly.</p>
+            </div>
+
+            <form class="secure-login-form" action="http://localhost:8080/submit-query" method="POST">
+                
+                <div class="form-input-wrapper">
+                    <label class="input-field-label">YOUR FULL NAME</label>
+                    <div class="field-interactive-container">
+                        <input type="text" name="clientName" class="gateway-text-input" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-input-wrapper">
+                    <label class="input-field-label">EMAIL ADDRESS</label>
+                    <div class="field-interactive-container">
+                        <input type="email" name="clientEmail" class="gateway-text-input" placeholder="Enter your active contact email" required>
+                    </div>
+                </div>
+
+                <div class="form-input-wrapper">
+                    <label class="input-field-label">INQUIRY SUBJECT TOPIC</label>
+                    <div class="field-interactive-container">
+                        <input type="text" name="querySubject" class="gateway-text-input" placeholder="e.g., Booking Amendment, Payment Confirmation" required>
+                    </div>
+                </div>
+
+                <div class="form-input-wrapper">
+                    <label class="input-field-label">DETAILED MESSAGE BODY</label>
+                    <div class="field-interactive-container">
+                        <textarea name="queryMessage" class="gateway-text-textarea" placeholder="Describe your travel arrangement questions in full detail..." rows="5" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-action-trigger-row" style="margin-top: 1.5rem;">
+                    <button type="submit" class="btn-gateway-submit-orange">DISPATCH SECURE QUERY</button>
+                </div>
+
+            </form>
+
+            <div class="login-card-footer" style="margin-top: 1.5rem;">
+                <p><a href="about.html" class="register-redirect-link">← Cancel and Return to About Us</a></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

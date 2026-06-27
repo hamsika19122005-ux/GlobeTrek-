@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Accounts | GlobeTrek Admin Portal</title>
+    <link rel="stylesheet" href="st4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-panel-body">
+
+    <header class="admin-top-bar">
+        <div class="admin-logo">
+            <h2>GlobeTrek <span>Admin Portal</span></h2>
+        </div>
+        <div class="admin-user-profile">
+            <span class="role-badge">Role: Administrator</span>
+        </div>
+    </header>
+
+    <div class="admin-workspace">
+        
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item">
+                    <span class="menu-icon">📊</span> Dashboard Home
+                </a>
+                <a href="stmanage.html" class="menu-item">
+                    <span class="menu-icon">📦</span> Manage Packages
+                </a>
+                <a href="stsystem.html" class="menu-item">
+                    <span class="menu-icon">🛒</span> System Bookings
+                </a>
+                <a href="stquery.html" class="menu-item">
+                    <span class="menu-icon">💬</span> User Queries <span class="badge-count">9</span>
+                </a>
+                <a href="staccount.html" class="menu-item active">
+                    <span class="menu-icon">👥</span> Staff Accounts
+                </a>
+                <a href="streport.html" class="menu-item">
+                    <span class="menu-icon">📈</span> Generate Reports
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-link">🚪 Secure Logout</a>
+            </div>
+        </aside>
+
+        <main class="admin-main-content">
+            
+            <div class="admin-navigation-row">
+                <a href="admin.html" class="btn-back-dashboard">
+                    <span class="back-arrow">←</span> Back to Dashboard
+                </a>
+                <a href="acc.html">
+                <button class="btn-add-staff-blue">+ CREATE NEW STAFF ACCOUNT</button>
+                </a>
+            </div>
+
+            <div class="management-workspace-card">
+                <div class="card-title-header">
+                    <h3>Internal Employee Registry & System Permissions</h3>
+                    <p>Provision corporate credentials, modify system access clearances, and track employee portal history.</p>
+                </div>
+
+                <div class="table-responsive-wrapper">
+                    <table class="inventory-data-table">
+                        <thead>
+                            <tr>
+                                <th>Staff ID</th>
+                                <th>Employee Details</th>
+                                <th>Assigned System Role</th>
+                                <th>Email Landmark Address</th>
+                                <th>Last Active Session</th>
+                                <th>Status</th>
+                                <th style="text-align: center;">Controls</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ST-001</td>
+                                <td><strong>Naveen Perera</strong></td>
+                                <td><span class="role-pill role-admin">Administrator</span></td>
+                                <td>naveen.admin@globetrek.com</td>
+                                <td class="activity-log">Today, 04:32 PM</td>
+                                <td><span class="status-indicator active-tag">ACTIVE</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Revoke</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ST-014</td>
+                                <td><strong>Priya Sharma</strong></td>
+                                <td><span class="role-pill role-clerk">Booking Clerk</span></td>
+                                <td>priya.s@globetrek.com</td>
+                                <td class="activity-log">Today, 11:05 AM</td>
+                                <td><span class="status-indicator active-tag">ACTIVE</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Revoke</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ST-022</td>
+                                <td><strong>Jerome Fernando</strong></td>
+                                <td><span class="role-pill role-guide">Tour Guide Expert</span></td>
+                                <td>jerome.field@globetrek.com</td>
+                                <td class="activity-log">08/06/2026</td>
+                                <td><span class="status-indicator suspended-tag">ON FIELD</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Revoke</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ST-031</td>
+                                <td><strong>Kumara Silva</strong></td>
+                                <td><span class="role-pill role-clerk">Booking Clerk</span></td>
+                                <td>kumara.silva@globetrek.com</td>
+                                <td class="activity-log">28/05/2026</td>
+                                <td><span class="status-indicator revoked-tag">SUSPENDED</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del" disabled style="opacity: 0.5; cursor: not-allowed;">Revoked</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

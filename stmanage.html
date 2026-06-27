@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Packages | GlobeTrek Admin Portal</title>
+    <link rel="stylesheet" href="st1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-panel-body">
+
+    <header class="admin-top-bar">
+        <div class="admin-logo">
+            <h2>GlobeTrek <span>Admin Portal</span></h2>
+        </div>
+        <div class="admin-user-profile">
+            <span class="role-badge">Role: Administrator</span>
+        </div>
+    </header>
+
+    <div class="admin-workspace">
+        
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item">
+                    <span class="menu-icon">📊</span> Dashboard Home
+                </a>
+                <a href="stmanage.html" class="menu-item active">
+                    <span class="menu-icon">📦</span> Manage Packages
+                </a>
+                <a href="stsystem.html" class="menu-item">
+                    <span class="menu-icon">🛒</span> System Bookings
+                </a>
+                <a href="stquery.html" class="menu-item">
+                    <span class="menu-icon">💬</span> User Queries <span class="badge-count">9</span>
+                </a>
+                <a href="staccount.html" class="menu-item">
+                    <span class="menu-icon">👥</span> Staff Accounts
+                </a>
+                <a href="streport.html" class="menu-item">
+                    <span class="menu-icon">📈</span> Generate Reports
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-link">🚪 Secure Logout</a>
+            </div>
+        </aside>
+
+        <main class="admin-main-content">
+            
+            <div class="admin-navigation-row">
+                <a href="admin.html" class="btn-back-dashboard">
+                    <span class="back-arrow">←</span> Back to Dashboard
+                </a>
+               <a href ="add.html">
+                <button  class="btn-add-package-teal">+ ADD NEW TRAVEL PACKAGE</button>
+                </a>
+                <!-- Sample Add Package Modal -->
+
+
+      
+
+    </div> 
+
+
+
+
+
+
+
+ <div class="management-workspace-card">
+                <div class="card-title-header">
+                    <h3>Package Inventory & Action Management</h3>
+                    <p>Modify, remove, or audit active travel listings appearing on the customer platform.</p>
+                </div>
+
+                <div class="table-responsive-wrapper">
+                    <table class="inventory-data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Package Name</th>
+                                <th>Destination</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th style="text-align: center;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td><strong>Ella Nature Explorer</strong></td>
+                                <td>Badulla (Hill Country)</td>
+                                <td class="table-price">$120.00</td>
+                                <td><span class="status-indicator active-tag">ACTIVE</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td><strong>Coastal Escape 3-Day</strong></td>
+                                <td>Negombo (Coastal Area)</td>
+                                <td class="table-price">$95.00</td>
+                                <td><span class="status-indicator active-tag">ACTIVE</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td><strong>Cultural Journey 5-Day</strong></td>
+                                <td>Jaffna (Northern Peninsula)</td>
+                                <td class="table-price">$150.00</td>
+                                <td><span class="status-indicator active-tag">ACTIVE</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td><strong>Nilaveli Beach Respite</strong></td>
+                                <td>Trincomalee</td>
+                                <td class="table-price">$110.00</td>
+                                <td><span class="status-indicator draft-tag">DRAFT</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-edit">Edit</button>
+                                    <button class="btn-table-del">Del</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

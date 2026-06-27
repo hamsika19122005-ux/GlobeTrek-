@@ -1,0 +1,227 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.customer-portal-body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f4f7f6 0%, #e2ebf0 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. CARD WORKSPACE CONTAINER
+   ========================================================================== */
+.login-gateway-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.login-card-workspace {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   3. HEADER SECTION
+   ========================================================================== */
+.login-card-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-card-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #112233;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.login-card-header p {
+    font-size: 0.95rem;
+    color: #667788;
+}
+
+/* ==========================================================================
+   4. FORM INPUTS & INTERACTIVE FIELDS
+   ========================================================================== */
+.secure-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-field-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #008080; /* Teal accent to match GlobeTrek theme */
+    letter-spacing: 1px;
+}
+
+.field-interactive-container {
+    width: 100%;
+}
+
+/* Input & Textarea Elements */
+.gateway-text-input, 
+.gateway-text-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #223344;
+    background-color: #f8fafc;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+/* Textarea specific adjustment */
+.gateway-text-textarea {
+    resize: vertical;
+}
+
+/* Interactive States */
+.gateway-text-input:focus, 
+.gateway-text-textarea:focus {
+    border-color: #008080;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.15);
+}
+
+/* Placeholders */
+.gateway-text-input::placeholder,
+.gateway-text-textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* ==========================================================================
+   5. BUTTON / ACTION TRIGGER
+   ========================================================================== */
+.form-action-trigger-row {
+    width: 100%;
+}
+
+.btn-gateway-submit-orange {
+    width: 100%;
+    padding: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    background-color: #ff5a36; /* Distinct vibrant travel orange */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(255, 90, 54, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-gateway-submit-orange:hover {
+    background-color: #e04422;
+    box-shadow: 0 6px 20px rgba(255, 90, 54, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-gateway-submit-orange:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(255, 90, 54, 0.2);
+}
+
+/* ==========================================================================
+   6. FOOTER & NAVIGATION LINKS
+   ========================================================================== */
+.login-card-footer {
+    text-align: center;
+}
+
+.register-redirect-link {
+    font-size: 0.9rem;
+    color: #667788;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.register-redirect-link:hover {
+    color: #112233;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 480px) {
+    body.customer-portal-body {
+        background: #ffffff; /* Clean solid white on tight mobile views */
+        align-items: transform;
+    }
+
+    .login-gateway-container {
+        margin-top: 0 !important;
+        padding: 10px;
+    }
+
+    .login-card-workspace {
+        box-shadow: none;
+        border: none;
+        padding: 20px 10px;
+    }
+
+    .login-card-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
