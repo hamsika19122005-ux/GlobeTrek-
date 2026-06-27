@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeTrek Adventures | Sri Lanka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">GlobeTrek <span>Adventures</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="package.html">Tour Packages</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-login">Login</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Your Next Great Adventure <br>Awaits in <span>Sri Lanka</span></h1>
+            <p>Explore curated multi-day tour packages, pristine beaches, and ancient heritage trails.</p>
+            
+            <form class="search-box" id="searchForm">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-location-dot"></i> Destination</label>
+                    <select id="destination">
+                        <option value="">Select Area...</option>
+                        <option value="negombo">Negombo</option>
+                        <option value="jaffna">Jaffna</option>
+                        <option value="colombo">Colombo</option>
+                        <option value="kandy">Kandy</option>
+                        <option value="galle">Galle</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label><i class="fa-solid fa-calendar-days"></i> Duration</label>
+                    <select id="duration">
+                        <option value="">Select Days...</option>
+                        <option value="1-3">1 - 3 Days</option>
+                        <option value="4-7">4 - 7 Days</option>
+                        <option value="7+">7+ Days</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label><i class="fa-solid fa-wallet"></i> Budget</label>
+                    <select id="budget">
+                        <option value="">Max Budget...</option>
+                        <option value="low">Budget Friendly</option>
+                        <option value="medium">Mid-Range</option>
+                        <option value="high">Luxury</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+     <section class="featured-packages">
+        <div class="section-title">
+            <h2>Featured <span>Packages</span></h2>
+            <p>Handpicked travel experiences highly rated by our adventurers</p>
+        </div>
+        <div class="package-grid" id="packageGrid">
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/ancient_heritage.png" alt="Cultural Triangle">
+                    <span class="price-tag">$299</span>
+                </div>
+                <div class="card-body">
+                    <h3>Ancient Heritage Trail</h3>
+                    <p>Explore Sigiriya, Anuradhapura, and Polonnaruwa historic ruins.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 5 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <a href="anci.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Golden_Sandy.png" alt="Beaches">
+                    <span class="price-tag">$199</span>
+                </div>
+                <div class="card-body">
+                    <h3>Golden Sandy Beaches</h3>
+                    <p>Relax and unwind along the coastal shores of Negombo and Mirissa.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 3 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.8</span>
+                    </div>
+                    <a href="sandy.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Misty_Hills.png" alt="Hill Country">
+                    <span class="price-tag">$399</span>
+                </div>
+                <div class="card-body">
+                    <h3>Misty Hills & Tea Estates</h3>
+                    <p>Journey through the scenic waterfalls and lush tea plantations of Ella.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 7 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <a href="misty.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+        
+     <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Cultural_Kandy.png" alt="Kandy Temple">
+                    <span class="price-tag">$150</span>
+                </div>
+                <div class="card-body">
+                    <h3>Cultural Kandy Escapade</h3>
+                    <p>Visit the sacred Temple of the Tooth Relic and stroll around Kandy Lake.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 2 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.7</span>
+                    </div>
+                    <a href="kandy.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Yala_wildlife.png" alt="Yala Safari">
+                    <span class="price-tag">$260</span>
+                </div>
+                <div class="card-body">
+                    <h3>Yala Wildlife Safari</h3>
+                    <p>Witness majestic elephants, leopards, and rare birds in their natural habitats.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 3 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <a href="yala.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Northen_heritage.png" alt="Jaffna Nallur Kovil">
+                    <span class="price-tag">$320</span>
+                </div>
+                <div class="card-body">
+                    <h3>Northern Heritage Gateway</h3>
+                    <p>Discover Jaffna Peninsula, the vibrant Nallur Kovil, and serene northern islands.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 4 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.8</span>
+                    </div>
+                    <a href="northen.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/little_england.png" alt="Nuwara Eliya">
+                    <span class="price-tag">$180</span>
+                </div>
+                <div class="card-body">
+                    <h3>Little England Getaway</h3>
+                    <p>Enjoy the cool breeze, colonial architecture, and beautiful Gregory Lake park views.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 2 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.6</span>
+                    </div>
+                    <a href="england.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Galle_Dutch.png" alt="Galle Lighthouse">
+                    <span class="price-tag">$220</span>
+                </div>
+                <div class="card-body">
+                    <h3>Galle Dutch Fort Voyage</h3>
+                    <p>Walk down historical cobblestone streets and view the iconic ocean lighthouse.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 3 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <a href="galle.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img">
+                    <img src="images/Adventure_hike.png" alt="Knuckles Mountain Range">
+                    <span class="price-tag">$340</span>
+                </div>
+                <div class="card-body">
+                    <h3>Adventure Hikes & Peaks</h3>
+                    <p>Trek through Knuckles Mountain Range and climb up the spectacular Adam's Peak.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-clock"></i> 6 Days</span>
+                        <span><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <a href="hike.html" class="btn-card">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>

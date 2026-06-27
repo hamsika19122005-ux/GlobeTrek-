@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Gateway Login | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="style6.css">
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page-body">
+
+    <!-- Header Navigation Bar (Matches all existing subpages perfectly) -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>GlobeTrek<span> Adventures</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="package.html">Tour Packages</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-secondary active-auth">Login</a>
+            <a href="register.html" class="btn-primary">Register</a>
+        </div>
+    </header>
+
+    <!-- Centered Split-Card Portal Container -->
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            
+            <!-- Structural Top Heading Context -->
+            <div class="auth-card-header">
+                <h2>Secure Login Gateway</h2>
+                <p>Access your personalized travel workspace or internal management portal.</p>
+            </div>
+
+            <!-- Frontend Server Error Display State Simulator (Hidden by default) -->
+            <div class="auth-error-banner" style="display: none;">
+                ❌ Authentication failed. The credentials provided do not match our system records.
+            </div>
+
+            <!-- Login Form Controls -->
+            <form action="#" method="POST" id="loginForm" class="auth-form">
+                
+                <!-- Account Username/Email Input Component -->
+                <div class="auth-field-group">
+                    <label for="userIdentity">Email Address or Username</label>
+                    <div class="input-with-icon">
+                        <span class="field-icon">✉️</span>
+                        <input type="text" id="userIdentity" placeholder="Enter your email or username" required>
+                    </div>
+                </div>
+
+                <!-- Account Security Password Input Component -->
+                <div class="auth-field-group">
+                    <div class="password-label-row">
+                        <label for="userPassword">Account Password</label>
+                        <a href="#" class="link-forgot-pass">Forgot Password?</a>
+                    </div>
+                    <div class="input-with-icon">
+                        <span class="field-icon">🔒</span>
+                        <input type="password" id="userPassword" placeholder="Enter secure password" required>
+                        <button type="button" class="btn-toggle-mask" onclick="togglePasswordVisibility()">👁️</button>
+                    </div>
+                </div>
+
+                <!-- Keep Session State Option Box -->
+                <div class="auth-meta-options">
+                    <label class="remember-me-checkbox">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Keep me logged in on this device</span>
+                    </label>
+                </div>
+
+                <!-- Primary Form Submission Trigger Button -->
+                <button type="submit" class="btn-submit-auth">VERIFY & SIGN IN</button>
+            </form>
+
+            <!-- Bottom Redirect Context Link -->
+            <div class="auth-card-footer">
+                <p>New to our platform? <a href="#">Create a traveler account</a></p>
+                <p class="crypto-notice">🛡️ Standard SSL 256-Bit Transport Tier Encrypted</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer System Layout (Matches home page setup seamlessly) -->
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>&copy; 2026 GlobeTrek Adventures. All Rights Reserved.</p>
+        </div>
+        <div class="footer-badges">
+            <span>🛡️ SSL Secured Transactions</span>
+            <span>♿ WCAG Accessible Layout</span>
+        </div>
+    </footer>
+
+    <!-- Basic Password Unmasking Behavioral Script -->
+    <script>
+        function togglePasswordVisibility() {
+            const passField = document.getElementById('userPassword');
+            if (passField.type === 'password') {
+                passField.type = 'text';
+            } else {
+                passField.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>
