@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="style5.css">
+    <link href=https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap rel=”stylesheet”>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h2>GlobeTrek<span> Adventures</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="package.html">Tour Packages</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-secondary">Login</a>
+            <a href="register.html" class="btn-primary">Register</a>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="contact-hero-content">
+            <h1>Get In Touch With Us</h1>
+            <p>Have questions about your Sri Lankan itinerary? Our travel desk is here to assist.</p>
+        </div>
+    </section>
+
+    <main class="contact-container">
+        <div class="contact-split-layout">
+            
+            <section class="contact-info-panel">
+                <h2>Contact Information</h2>
+                <p class="panel-subtext">Reach out to our newly established central hub in Negombo directly through any channel.</p>
+
+                <div class="info-details-list">
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div class="info-text">
+                            <h4>Our Head Office</h4>
+                            <p>Main Beach Road, Lewis Place, Negombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-ico">📞</span>
+                        <div class="info-text">
+                            <h4>Direct Hotlines</h4>
+                            <p><a href=tel:+94312223456>+94 31 222 3456</a> (Office)</p>
+                            <p><a href=tel:+94771234567>+94 77 123 4567</a> (24/7 Support)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div class="info-text">
+                            <h4>Email Communications</h4>
+                            <p><a href=mailto:support@globetrek.com>support@globetrek.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div class="info-text">
+                            <h4>Desk Operating Hours</h4>
+                            <p>Monday – Saturday: 8:00 AM – 6:00 PM (SLST)</p>
+                            <p><em>*Online query submissions open 24/7</em></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-panel">
+                <div class="form-wrapper-card">
+                    <h3>Submit a Travel Query Form</h3>
+                    <p>Provide your travel requirements down below, and our internal staff will confirm details quickly.</p>
+                    
+                    <div class="form-error-summary" style="display: none;">
+                        ⚠️ Please fill out all required form fields accurately before sending.
+                    </div>
+
+                    <form action="#" method="POST" id="queryForm">
+                        <div class="form-input-row">
+                            <div class="form-field-group">
+                                <label for="fullName">Your Full Name *</label>
+                                <input type="text" id="fullName" placeholder="e.g., John Doe" required>
+                            </div>
+                            <div class="form-field-group">
+                                <label for="emailAddr">Email Address *</label>
+                                <input type="email" id="emailAddr" placeholder="e.g., john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field-group">
+                            <label for="queryType">What do you need help with? *</label>
+                            <select id="queryType" required>
+                                <option value="">Select an arrangement category...</option>
+                                <option value="custom">Customizing a Tour Package Plan</option>
+                                <option value="booking">Booking / Reservation Questions</option>
+                                <option value="hotel">Hotel & Transport Coordination</option>
+                                <option value="payment">Secure Payment Issues</option>
+                                <option value="other">General Organizational Query</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field-group">
+                            <label for="messageBody">Detailed Description of Requirements *</label>
+                            <textarea id="messageBody" rows="5" placeholder="Please describe your specific dates, requested destinations, and traveler counts..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit-query">SEND SECURE QUERY</button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>&copy; 2026 GlobeTrek Adventures. All Rights Reserved.</p>
+        </div>
+        <div class="footer-badges">
+            <span>🛡️ SSL Secured Transactions</span>
+            <span>♿ WCAG Accessible Layout</span>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event){
+event.preventDefault();
+alert("Inquiry Sended Successfully! Our agents will respond shortly.");
+this.reset();
+        });
+    </script>
+
+</body>
+</html>

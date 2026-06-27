@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ella Nature Explorer Tour (4 Days, 3 Nights) | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="cus.css">
+    <!-- Google Fonts link matching your template aesthetic criteria -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tour-details-page">
+
+    <!-- Header Navigation Bar (Matches all dashboard screens) -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>GlobeTrek<span> Adventures</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="package.html" class="active">Tour Packages</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-secondary">Login</a>
+            <a href="register.html" class="btn-primary">Register</a>
+        </div>
+    </header>
+
+    <!-- Main Content Workspace Wrapper -->
+    <main class="tour-container">
+        
+        <!-- Main Tour Title Header matching your screenshot layout exactly -->
+        <h1 class="tour-main-title">Ella Nature Explorer Tour (4 Days, 3 Nights)</h1>
+        
+        <!-- Two-Column Grid Setup: Content on Left, Sidebar Configurator on Right -->
+        <div class="tour-layout-grid">
+            
+            <!-- LEFT COLUMN: Overview & Detailed Itinerary Panels -->
+            <div class="tour-content-left">
+                
+                <!-- Destination Tag & Hero Image Container -->
+                <div class="tour-image-container">
+                    <span class="location-marker">📍 Hill Country (Badulla)</span>
+                    <div class="tour-hero-placeholder-image ella-hero-bg">
+                        <p>⛰️ Pristine highlands, mist-shrouded green valleys, and iconic rail pathways</p>
+                    </div>
+                </div>
+
+                <!-- Tour Overview Section Card -->
+                <div class="info-card-block">
+                    <h3>About this Tour</h3>
+                    <p class="tour-description">
+                        Immerse yourself in the breathtaking landscape of Sri Lanka's hill country. This 
+                        pre-vetted trip includes pristine train tracks, panoramic mountain view hikes, and 
+                        local biological excursions. Perfect for adventure couples and nature enthusiasts 
+                        alike.
+                    </p>
+                    
+                    <!-- Inclusion Panel Matching Your Exact Screenshot Styling -->
+                    <div class="inclusion-notes-box">
+                        <strong>Inclusion Notes:</strong> All breakfasts, certified trail guides, and local train transport 
+                        tickets are fully included and pre-vetted.
+                    </div>
+                </div>
+
+                <!-- Interactive Accordion Style Itinerary Matrix -->
+                <div class="info-card-block">
+                    <h3>Detailed Itinerary</h3>
+                    
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 1: Arrival & Mountain Tea Hike</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Arrive at the scenic Ella station. Check into your valley-view eco-lodge, freshen up, and begin a guided afternoon hike through lush green organic tea estates. Learn tea-pluking traditions from locals and finish the day watching the sunset from a panoramic mountain viewpoint.</p>
+
+               
+                    </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 2: Nine Arch Bridge Exploration & Little Adam's Peak Trek</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Wake up early to visit the world-famous Nine Arch Bridge just in time to see the morning train pass over the stone arches. In the afternoon, embark on a moderate trek up Little Adam's Peak for breathtaking, unobstructed 360-degree views of the Ella Gap drop-off.</p>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 3: Ravana Falls Sightseeing & Local Wilderness Excursion</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Travel down the winding mountain passes to visit the historic Ravana Falls waterfall. Explore hidden cliffside caves linked to local folklore legends, followed by an authentic Sri Lankan culinary demonstration and wood-fired clayy pot lunch at a village home matrix.</p>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 4: Morning Mist Photography & Departure Journey</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Capture beautiful landscape photos of the morning mist lifting over the mountain vallys. Enjoy a final fresh breakfast buffer featuring tropical fruits and local spices before checking out and catching your return transit vehicle.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Booking Sidebar Configurator Card Panel -->
+            <div class="tour-sidebar-right">
+                <div class="booking-configurator-card">
+                    
+                    <h3>Booking Configurator</h3>
+                    
+                    <form id="ellaBookingForm" class="booking-form-layout">
+                        
+                        <!-- Input 1: Selection Date Calendar Dropdown -->
+                        <div class="booking-field-group">
+                            <label for="travelDate">Travel Date</label>
+                            <input type="date" id="travelDate" required>
+                        </div>
+
+                        <!-- Input 2: Number of Guests Numeric Input Counter -->
+                        <div class="booking-field-group">
+                            <label for="numGuests">Number of Guests</label>
+                            <input type="number" id="numGuests" min="1" value="2" oninput="calculateTotal()" required>
+                        </div>
+
+                        <!-- Input 3: Accommodation Tier Radio Selection Options -->
+                        <div class="booking-field-group">
+                            <label>Accommodation Tier</label>
+                            
+                            <label class="radio-label-container">
+                                <input type="radio" name="accommodationTier" value="0" checked onchange="calculateTotal()">
+                                <span>Standard (Included)</span>
+                            </label>
+                            
+                            <label class="radio-label-container">
+                                <input type="radio" name="accommodationTier" value="50" onchange="calculateTotal()">
+                                <span>Luxury Premium (+$50/person)</span>
+                            </label>
+                        </div>
+
+                        <!-- Price Itemization Invoicing Invoices -->
+                        <div class="price-breakdown-row">
+                            <span>Base Price (per person):</span>
+                            <span class="price-calc-value">$120.00</span>
+                        </div>
+
+                        <div class="total-price-row">
+                            <span>Total Price:</span>
+                            <span class="final-calculated-sum" id="totalPriceDisplay">$240.00</span>
+                        </div>
+
+                        <!-- Core Booking Payment Form Submission Button -->
+                        <button type="submit" class="btn-book-now">Proceed to Payment</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Global Website System Layout Footer Element -->
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>&copy; 2026 GlobeTrek Adventures. All Rights Reserved.</p>
+        </div>
+        <div class="footer-badges">
+            <span>🛡️ SSL Secured Transactions</span>
+            <span>♿ WCAG Accessible Layout</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Client Dynamic Pricing Math Computation Script Logic -->
+    <script>
+        function calculateTotal() {
+            // Base value configured explicitly for the Ella package ($120)
+            const basePrice = 120; 
+            const guestsInput = document.getElementById('numGuests').value;
+            const numGuests = parseInt(guestsInput) || 0;
+            
+            // Checking active choice state on room tier surcharges
+            const tiers = document.getElementsByName('accommodationTier');
+            let extraCharge = 0;
+            for (let i = 0; i < tiers.length; i++) {
+                if (tiers[i].checked) {
+                    extraCharge = parseInt(tiers[i].value);
+                    break;
+                }
+            }
+            
+            // Formula Execution 
+            const finalTotal = (basePrice + extraCharge) * numGuests;
+            
+            // Printing result string dynamically back to visual display wrapper
+            document.getElementById('totalPriceDisplay').innerText = "$" + finalTotal.toFixed(2);
+        }
+    </script>
+   <script>
+    document.querySelector('.btn-book-now').addEventListener('click', function(event){
+        event.preventDefault();
+        const paymentTotal = document.getElementById('totalPriceDisplay').textContent;
+        alert('Securely initializing checkout gateway for paymentTotal}. Please wait..');
+        this.closest('form').submit();
+    });
+   </script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

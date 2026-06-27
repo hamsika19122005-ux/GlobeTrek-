@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Dashboard - GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- Top Dashboard Context Bar -->
+    <header class="dashboard-header">
+        <div class="db-logo">
+            <h2>GlobeTrek <span>Admin Portal</span></h2>
+        </div>
+
+         <div class="admin-navigation-row">
+        <a href="package.html" class="btn-back-packages">
+            <span class="back-arrow">←</span> View Live Tour Packages
+        </a>
+    </div>
+        <div class="db-user-info">
+            <span class="user-role-tag">Role: Administrator</span>
+            <span class="user-avatar">👤</span>
+        </div>
+    </header>
+
+    <!-- Split-Panel Layout Container -->
+    <div class="dashboard-container">
+        
+        <!-- SIDEBAR NAVIGATION PANEL -->
+        <aside class="dashboard-sidebar">
+            <nav class="sidebar-nav">
+                <a href="admin.html" class="nav-item active">
+                    <span class="nav-icon">📊</span> Dashboard Home
+                </a>
+                <a href="stmanage.html" class="nav-item">
+                    <span class="nav-icon">📦</span> Manage Packages
+                </a>
+                <a href="stsystem.html" class="nav-item">
+                    <span class="nav-icon">🛒</span> System Bookings
+                </a>
+                <a href="stquery.html" class="nav-item">
+                    <span class="nav-icon">💬</span> User Queries 
+                    <span class="badge-count">9</span>
+                </a>
+                <a href="staccount.html" class="nav-item">
+                    <span class="nav-icon">👥</span> Staff Accounts
+                </a>
+                <a href="streport.html" class="nav-item">
+                    <span class="nav-icon">📈</span> Generate Reports
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="btn-logout">
+                    <span class="nav-icon">🚪</span> Secure Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN APPLICATION WORKSPACE CONTENT -->
+        <main class="dashboard-main">
+            
+            <!-- Section 1: Dynamic KPI Overview Metrics -->
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-title">Active Bookings</div>
+                    <div class="metric-value">142</div>
+                    <div class="metric-trend up">▲ 12% vs last month</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Sales This Month</div>
+                    <div class="metric-value">$12,450</div>
+                    <div class="metric-trend up">▲ 8% targets met</div>
+                </div>
+                <div class="metric-card alert-card">
+                    <div class="metric-title">Pending Queries</div>
+                    <div class="metric-value">9</div>
+                    <div class="metric-trend priority">⚠️ Requires Action</div>
+                </div>
+            </section>
+
+            <!-- Section 2: Data Grid Table Workspace -->
+            <section class="data-workspace">
+                <div class="workspace-header">
+                    <h3>Package Inventory & Action Management</h3>
+                    <a href="add.html">
+                    <button class="btn-add-package">+ ADD NEW TRAVEL PACKAGE</button>
+                    </a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Package Name</th>
+                                <th>Destination</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td><strong>Ella Nature Explorer</strong></td>
+                                <td>Badulla (Hill Country)</td>
+                                <td class="table-price">$120.00</td>
+                                <td><span class="status-pill active-pill">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-table-edit">Edit</button>
+                                        <button class="btn-table-del">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td><strong>Coastal Escape 3-Day</strong></td>
+                                <td>Negombo (Coastal Area)</td>
+                                <td class="table-price">$95.00</td>
+                                <td><span class="status-pill active-pill">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-table-edit">Edit</button>
+                                        <button class="btn-table-del">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td><strong>Cultural Journey 5-Day</strong></td>
+                                <td>Jaffna (Northern Peninsula)</td>
+                                <td class="table-price">$150.00</td>
+                                <td><span class="status-pill active-pill">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-table-edit">Edit</button>
+                                        <button class="btn-table-del">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td><strong>Nilaveli Beach Respite</strong></td>
+                                <td>Trincomalee</td>
+                                <td class="table-price">$110.00</td>
+                                <td><span class="status-pill draft-pill">Draft</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-table-edit">Edit</button>
+                                        <button class="btn-table-del">Del</button>
+                                    </div>
+                                     </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
+

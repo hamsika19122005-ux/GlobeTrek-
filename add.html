@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeTrek Admin - Add New Package</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+
+    <div id="databaseToast" class="toast-alert">
+        <div class="toast-body">
+            <span class="success-checkmark">&#10004;</span>
+            <div class="toast-txt">
+                <h4>Database Updated</h4>
+                <p>The new travel package has been successfully published.</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="admin-header">
+        <div class="logo-area">
+            <h1>GlobeTrek <span>Admin Portal</span></h1>
+        </div>
+        <div class="role-badge">Role: Administrator</div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>Dashboard Home</li>
+                    <li class="active">Manage Packages</li>
+                    <li>System Bookings</li>
+                    <li>User Queries <span class="badge">9</span></li>
+                    <li>Staff Accounts</li>
+                    <li>Generate Reports</li>
+                </ul>
+            </nav>
+            <div class="logout">Secure Logout</div>
+        </aside>
+
+        <main class="content-area">
+            
+            <div class="top-actions">
+                <a href="stmanage.html" class="btn-back">&larr; Back to Dashboard</a>
+            </div>
+
+            <section class="form-card">
+                <h2>Create New Travel Package</h2>
+                <p class="subtitle">Fill out the details below to deploy a new travel listing onto the customer platform.</p>
+                
+                <hr class="divider">
+
+                <form id="newPackageForm" onsubmit="showDatabaseNotification(event)" class="package-form">
+                    
+                    <div class="form-group">
+                        <label for="packageName">Package Name</label>
+                        <input type="text" id="packageName" placeholder="e.g., Ella Nature Explorer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" placeholder="e.g., Badulla (Hill Country)" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group flex-1">
+                            <label for="price">Price (USD)</label>
+                            <input type="number" id="price" step="0.01" placeholder="120.00" required>
+                        </div>
+                        
+                        <div class="form-group flex-1">
+                            <label for="status">Initial Status</label>
+                            <select id="status" required>
+                                <option value="ACTIVE">Active</option>
+                                <option value="DRAFT">Draft</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Package Description</label>
+                        <textarea id="description" rows="4" placeholder="Briefly write about the main highlights and landmarks..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" onclick="window.location.href='stmanage.html'" class="btn-cancel">Cancel</button>
+                        <button type="submit" class="btn-submit">Save & Publish</button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showDatabaseNotification(event) {
+            // Stops automatic form redirection to showcase notification layout safely
+            event.preventDefault(); 
+            
+            const databaseToast = document.getElementById('databaseToast');
+            databaseToast.classList.add('visible-toast');
+            
+            // Notification automatically pulls back out of frame after 3.5 seconds
+            setTimeout(() => {
+                databaseToast.classList.remove('visible-toast');
+                // Optional: redirect to dashboard after notification hides
+                // window.location.href = 'stmanage.html';
+            }, 3500);
+        }
+    </script>
+</body>
+</html>

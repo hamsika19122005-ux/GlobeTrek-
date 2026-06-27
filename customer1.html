@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Escape Tour (3 Days, 2 Nights) | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="cus2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tour-details-page">
+
+    <header class="main-header">
+        <div class="logo">
+            <h2>GlobeTrek<span> Adventures</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="package.html" class="active">Tour Packages</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-secondary">Login</a>
+            <a href="register.html" class="btn-primary">Register</a>
+        </div>
+    </header>
+
+    <main class="tour-container">
+        
+        <h1 class="tour-main-title">Coastal Escape Tour (3 Days, 2 Nights)</h1>
+        
+        <div class="tour-layout-grid">
+            
+            <div class="tour-content-left">
+                
+                <div class="tour-image-container">
+                    <span class="location-marker">📍 Western Coast (Negombo)</span>
+                    <div class="tour-hero-placeholder-image">
+                        <p>🌊 Sun-kissed golden shores, historic Dutch canals, and vibrant lagoon life</p>
+                    </div>
+                </div>
+
+                <div class="info-card-block">
+                    <h3>About this Tour</h3>
+                    <p class="tour-description">
+                        Relax on tropical golden sands, tour Dutch colonial canals, and sample fresh seafood markets. 
+                        This pre-vetted trip takes you through the historical fishing town of Negombo, offering the perfect blend 
+                        of relaxation and cultural exploration along Sri Lanka's beautiful Western coastline. Perfect for couples, 
+                        families, and seafood enthusiasts alike.
+                    </p>
+                    
+                    <div class="inclusion-notes-box">
+                        <strong>Inclusion Notes:</strong> All breakfasts, certified boat tour guides, historical site entry fees, 
+                        and local canal transport tickets are fully included and pre-vetted.
+                    </div>
+                </div>
+
+                <div class="info-card-block">
+                    <h3>Detailed Itinerary</h3>
+                    
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 1: Arrival, Negombo Lagoon & Dutch Canal Boat Tour</span>
+                            <span class="accordion-icon">+</span>
+                        
+                        </div>
+                        <div class="accordion-body">
+                            <p>Arrive and check into your coasral resort. In the afternoon, embark on a relaxing boat ride through the historic Hamilton Dutch Canal and Negombo Lagoon. Observe local fisherman casting traditional nets and catch a stunning sunset over the mangrove waters.</p>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 2: Morning Seafood Market Exploration & Golden Beach Relaxation</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Experience the bustling energy of the famous Negombo Lellama seafood market at sunrise. Spend the afternoon unwinding on the wide golden sandy beaches, or swimming in the warm waters of the Indian Ocean before enjoying a fresh beachside seafood dinner barbecue.</p>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 3: Historical Churches Cycling Tour & Departure</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Take a guided bicycle tour through the city streets to admire the architecture of centuries-old historic churches. Shop for local spices, handicrafts, and souvenirs along the lively beach roads before arranging your final check-out and transit depature to the nearby international airport.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tour-sidebar-right">
+                <div class="booking-configurator-card">
+                    
+                    <h3>Booking Configurator</h3>
+                    
+                    <form id="coastalBookingForm" class="booking-form-layout">
+                        
+                        <div class="booking-field-group">
+                            <label for="travelDate">Travel Date</label>
+                            <input type="date" id="travelDate" required>
+                        </div>
+
+                        <div class="booking-field-group">
+                            <label for="numGuests">Number of Guests</label>
+                            <input type="number" id="numGuests" min="1" value="2" oninput="calculateTotal()" required>
+                        </div>
+
+                        <div class="booking-field-group">
+                            <label>Accommodation Tier</label>
+                            
+                            <label class="radio-label-container">
+                                <input type="radio" name="accommodationTier" value="0" checked onchange="calculateTotal()">
+                                <span>Standard (Included)</span>
+                            </label>
+                            
+                            <label class="radio-label-container">
+                                <input type="radio" name="accommodationTier" value="40" onchange="calculateTotal()">
+                                <span>Luxury Premium (+$40/person)</span>
+                            </label>
+                        </div>
+
+                        <div class="price-breakdown-row">
+                            <span>Base Price (per person):</span>
+                            <span class="price-calc-value">$95.00</span>
+                        </div>
+
+                        <div class="total-price-row">
+                            <span>Total Price:</span>
+                            <span class="final-calculated-sum" id="totalPriceDisplay">$190.00</span>
+                        </div>
+
+                        <button type="submit" class="btn-book-now">Proceed to Payment</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>&copy; 2026 GlobeTrek Adventures. All Rights Reserved.</p>
+        </div>
+        <div class="footer-badges">
+            <span>🛡️ SSL Secured Transactions</span>
+            <span>♿ WCAG Accessible Layout</span>
+        </div>
+    </footer>
+
+    <script>
+        function calculateTotal() {
+            // Base value set specifically for the Coastal Escape package ($95)
+            const basePrice = 95; 
+            const guestsInput = document.getElementById('numGuests').value;
+            const numGuests = parseInt(guestsInput) || 0;
+            
+            // Checking chosen radio pricing surcharge tiers
+            const tiers = document.getElementsByName('accommodationTier');
+            let extraCharge = 0;
+            for (let i = 0; i < tiers.length; i++) {
+                if (tiers[i].checked) {
+                    extraCharge = parseInt(tiers[i].value);
+                    break;
+                }
+            }
+            
+            // Math Formula execution
+            const finalTotal = (basePrice + extraCharge) * numGuests;
+            
+            // Printing output back to HTML visual elements
+            document.getElementById('totalPriceDisplay').innerText = "$" + finalTotal.toFixed(2);
+        }
+    </script>
+    <script>
+    document.querySelector('.btn-book-now').addEventListener('click', function(event){
+        event.preventDefault();
+        const paymentTotal = document.getElementById('totalPriceDisplay').textContent;
+        alert('Securely initializing checkout gateway for paymentTotal}. Please wait..');
+        this.closest('form').submit();
+    });
+   </script>
+</body>
+</html>

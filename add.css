@@ -1,0 +1,297 @@
+/* Core Page Layout Framework Reset */
+{
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+    Font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+Body {
+    Background-color: #f4f6f9;
+    Color: #333;
+}
+
+/* Header Component Configuration */
+.admin-header {
+    Background-color: #0d6b7b; /* The precise teal matching your portal design */
+    Color: #ffffff;
+    Padding: 15px 30px;
+    Display: flex;
+    Justify-content: space-between;
+    Align-items: center;
+    Box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-area h1 {
+    Font-size: 20px;
+    Font-weight: 600;
+}
+
+.logo-area h1 span {
+    Font-weight: 300;
+    Font-size: 16px;
+    Opacity: 0.8;
+}
+
+.role-badge {
+    Background-color: rgba(255, 255, 255, 0.15);
+    Padding: 6px 14px;
+    Border-radius: 4px;
+    Font-size: 13px;
+}
+
+/* Master Grid Structure Layout */
+.main-container {
+    Display: flex;
+    Min-height: calc(100vh – 56px);
+}
+
+/* Left Sidebar Engine */
+.sidebar {
+    Width: 240px;
+    Background-color: #1a1e29;
+    Color: #a0aec0;
+    Padding-top: 20px;
+    Display: flex;
+    Flex-direction: column;
+    Justify-content: space-between;
+}
+
+.sidebar ul {
+    List-style: none;
+}
+
+.sidebar ul li {
+    Padding: 15px 25px;
+    Font-size: 14px;
+    Cursor: pointer;
+    Border-left: 4px solid transparent;
+    Transition: all 0.2s;
+}
+
+.sidebar ul li:hover, .sidebar ul li.active {
+    Background-color: #242936;
+    Color: #ffffff;
+    Border-left-color: #0d6b7b;
+}
+
+.sidebar .badge {
+    Background-color: #e53e3e;
+    Color: white;
+    Padding: 2px 6px;
+    Border-radius: 10px;
+    Font-size: 11px;
+    Float: right;
+}
+
+.logout {
+    Padding: 20px 25px;
+    Font-size: 13px;
+    Border-top: 1px solid #2d3748;
+    Cursor: pointer;
+    Color: #e53e3e;
+}
+
+/* Main Working Canvas Grid Layout */
+.content-area {
+    Flex: 1;
+    Padding: 40px;
+    Max-width: 950px;
+    Margin: 0 auto;
+    Width: 100%;
+}
+
+.top-actions {
+    Margin-bottom: 20px;
+}
+
+.btn-back {
+    Text-decoration: none;
+    Color: #4a5568;
+    Background-color: #ffffff;
+    Padding: 8px 16px;
+    Border-radius: 4px;
+    Font-size: 14px;
+    Font-weight: 500;
+    Border: 1px solid #e2e8f0;
+    Transition: all 0.2s;
+}
+
+.btn-back:hover {
+    Background-color: #edf2f7;
+    Color: #1a202c;
+}
+
+/* Form Container Card Structure */
+.form-card {
+    Background-color: #ffffff;
+    Border-radius: 8px;
+    Padding: 35px;
+    Box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h2 {
+    Font-size: 22px;
+    Color: #2d3748;
+    Margin-bottom: 6px;
+}
+
+.subtitle {
+    Font-size: 14px;
+    Color: #718096;
+    Margin-bottom: 20px;
+}
+
+.divider {
+    Border: 0;
+    Height: 1px;
+    Background-color: #e2e8f0;
+    Margin-bottom: 30px;
+}
+
+/* Form Input Alignment Styles */
+.package-form {
+    Display: flex;
+    Flex-direction: column;
+    Gap: 22px;
+}
+
+.form-row {
+    Display: flex;
+    Gap: 20px;
+}
+
+.flex-1 {
+    Flex: 1;
+}
+
+.form-group {
+    Display: flex;
+    Flex-direction: column;
+    Gap: 8px;
+}
+
+.form-group label {
+    Font-size: 14px;
+    Font-weight: 600;
+    Color: #4a5568;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    Width: 100%;
+    Padding: 10px 14px;
+    Border: 1px solid #cbd5e0;
+    Border-radius: 6px;
+    Font-size: 15px;
+    Background-color: #fff;
+    Color: #2d3748;
+    Transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focused UI Outlines */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    Outline: none;
+    Border-color: #0d6b7b;
+    Box-shadow: 0 0 0 3px rgba(13, 107, 123, 0.15);
+}
+
+/* Action Control Row Layouts */
+.form-actions {
+    Display: flex;
+    Justify-content: flex-end;
+    Gap: 12px;
+    Margin-top: 10px;
+    Border-top: 1px solid #e2e8f0;
+    Padding-top: 25px;
+}
+
+.btn-cancel {
+    Background-color: #fff;
+    Color: #4a5568;
+    Border: 1px solid #cbd5e0;
+    Padding: 10px 20px;
+    Border-radius: 6px;
+    Cursor: pointer;
+    Font-weight: 500;
+    Font-size: 14px;
+    Transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+    Background-color: #f7fafc;
+}
+
+.btn-submit {
+    Background-color: #0d6b7b; /* Accent corporate color mapped directly to submission action */
+    Color: white;
+    Border: none;
+    Padding: 10px 24px;
+    Border-radius: 6px;
+    Cursor: pointer;
+    Font-weight: 600;
+    Font-size: 14px;
+    Transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    Background-color: #0a525e;
+}
+
+/* ==========================================================================
+   DATABASE FLOATING TOAST NOTIFICATION STYLING
+   ========================================================================== */
+.toast-alert {
+    Position: fixed;
+    Top: -100px; /* Positioned out of screen bounds naturally */
+    Right: 35px;
+    Background-color: #ffffff;
+    Border-left: 5px solid #10b981; /* Green success bar indicator status */
+    Padding: 16px 22px;
+    Border-radius: 6px;
+    Box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bounce spring transition motion profile */
+}
+
+/* Active Class injected by trigger event function to drop down */
+.toast-alert.visible-toast {
+    Top: 35px;
+    Opacity: 1;
+}
+
+.toast-body {
+    Display: flex;
+    Align-items: center;
+    Gap: 14px;
+}
+
+.success-checkmark {
+    Background-color: #e6fbf3;
+    Color: #10b981;
+    Width: 32px;
+    Height: 32px;
+    Border-radius: 50%;
+    Display: flex;
+    Align-items: center;
+    Justify-content: center;
+    Font-weight: bold;
+    Font-size: 15px;
+}
+
+.toast-txt h4 {
+    Font-size: 14px;
+    Color: #1a202c;
+    Font-weight: 600;
+    Margin-bottom: 2px;
+}
+
+.toast-txt p {
+    Font-size: 12px;
+    Color: #718096;
+}
+
