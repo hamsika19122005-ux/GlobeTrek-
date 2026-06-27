@@ -1,0 +1,647 @@
+/* ==========================================================================*/
+/* ==========================================================================
+   1. GLOBAL VARIABLES & STYLES (Based on UI Justification Matrix)
+   ========================================================================== */
+:root {
+    --primary-color: #005F73;      /* Deep Teal: Trust, safety, security */
+    --secondary-color: #EE9B00;    /* Warm Amber: Interactive dynamic action CTAs */
+    --text-color: #2B2D42;         /* Charcoal Grey: Accessible readability without eye strain */
+    --bg-light: #F8F9FA;           /* Off-White Layout background surface */
+    --white: #FFFFFF;
+    --transition-speed: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION PATTERNS
+   ========================================================================== */
+.main-header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.logo h2 span {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 1.5rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
+.auth-buttons .btn-secondary {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 1.2rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.auth-buttons .btn-primary {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.auth-buttons .btn-primary:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   3. HERO REGION & CONTROLLER SEARCH STRIP
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    /* Simulated premium atmospheric destination photo background placeholder */
+    background: url('images/Ella.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Ensures contrast accessibility for header text */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Search widget strip component layout styling */
+.search-widget {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 1.2rem;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.search-group select {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.85rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.search-btn:hover {
+    background-color: #d68a00;
+}
+
+/* ==========================================================================
+   4. DYNAMIC TOUR PACKAGES SHOWCASE CONTENT GRID
+   ========================================================================== */
+.packages-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content cards placeholder stock images */
+.bg-ella { background-image: url('images/Ella.png'); }
+.bg-negombo { background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80'); }
+.bg-jaffna { background-image: url('https://images.unsplash.com/photo-1568241322289-43c3d526e855?auto=format&fit=crop&w=400&q=80'); }
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.package-price span {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.package-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    height: 70px; /* Forces equal spacing limits for description layouts */
+    overflow: hidden;
+}
+
+.btn-view-detail {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-view-detail:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   5. FOOTER ARCHITECTURE Layout
+   ========================================================================== */
+.main-footer {
+    background-color: var(--text-color);
+    color: #ced4da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.footer-badges span {
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (Ensuring Clean Mobile/Tablet Reflow)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .search-widget {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-widget {
+        grid-template-columns: 1fr;
+    }
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .main-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+
+/*   16. TOUR DETAIL PAGES SYSTEM LAYOUTS (CUSTOMER ACCESS VIEWS)
+   ========================================================================== */
+.tour-details-page {
+    background-color: #F8FAFC;
+}
+
+.tour-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+.tour-main-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #0F172A;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Two-column dashboard matrix setup */
+.tour-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px; /* Left takes remaining space, right sidebar is exactly fixed */
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Left panels structure layout profiles */
+.tour-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tour-image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.location-marker {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #005F73;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+/* Fallback hero background visual block setup */
+.tour-hero-placeholder-image {
+    background: linear-gradient(rgba(0, 95, 115, 0.6), rgba(15, 23, 42, 0.8)), 
+                url('images/Ella.png'); /* Ambient Coastal Sri Lanka fallback backdrop */
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+.tour-hero-placeholder-image p {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Standard Content Display Panels Card Layer styles */
+.info-card-block {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.info-card-block h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #005F73;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    border-left: 4px solid #005F73;
+    padding-left: 0.75rem;
+}
+
+.tour-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 1.5rem;
+}
+
+/* Custom layout inclusion alert info bar panel */
+.inclusion-notes-box {
+    background-color: #F0FDF4;
+    border-left: 4px solid #16A34A;
+    padding: 1rem 1.25rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.92rem;
+    color: #14532D;
+    line-height: 1.5;
+}
+
+/* Accordion layout framework settings */
+.itinerary-accordion-item {
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    background-color: #F8FAFC;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #1E293B;
+}
+
+.accordion-icon {
+    font-weight: 600;
+    color: #005F73;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   17. RIGHT COLUMN: BOOKING SIDEBAR CARD LAYOUT
+   ========================================================================== */
+.booking-configurator-card {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    position: sticky;
+    top: 100px; /* Keeps the booking box locked on viewport scroll profiles */
+}
+
+.booking-configurator-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #005F73;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #F1F5F9;
+}
+
+.booking-form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.booking-field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-field-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.booking-field-group input[type="date"],
+.booking-field-group input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #1E293B;
+    outline: none;
+}
+
+/* Tiers radio control rows configuration sets */
+.radio-label-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.radio-label-container input[type="radio"] {
+    accent-color: #005F73;
+    width: 17px;
+    height: 17px;
+}
+
+/* Dynamic price text alignment metrics display layers */
+.price-breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #64748B;
+    margin-top: 0.5rem;
+}
+
+.total-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px dashed #E2E8F0;
+    margin-top: 0.25rem;
+}
+
+.total-price-row span {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #1E293B;
+}
+
+.final-calculated-sum {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: #005F73 !important;
+}
+
+/* Submission action button tier */
+.btn-book-now {
+    width: 100%;
+    background-color: #D67D00; /* Matching warm action theme focus button profiles */
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-book-now:hover {
+    background-color: #B86B00;
+}
+
+/* Responsive screen adaptive presentation configuration matrix scale hooks */
+@media (max-width: 992px) {
+    .tour-layout-grid {
+        grid-template-columns: 1fr; /* Stacks the columns vertically on tablet/mobile views */
+    }
+    .booking-configurator-card {
+        position: static;
+    }
+}
+
+.itinerary-accordion-item {
+    background-color:  #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.accordion-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #334155;
+    user-select: none;
+
+}
+
+.accordion-icon{
+    font-size: 1.2rem;
+    color: #0F4C5C ;
+    font-weight: 700;
+}
+
+.accordion-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    background-color: #FAFAFA;
+    border-top: 1px solid #F1F5F9;
+    display:block;
+}
+
+

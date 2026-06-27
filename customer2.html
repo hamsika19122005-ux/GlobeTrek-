@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Journey Tour (5 Days, 4 Nights) | GlobeTrek Adventures</title>
+    <link rel="stylesheet" href="cus3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tour-details-page">
+
+    <header class="main-header">
+        <div class="logo">
+            <h2>GlobeTrek<span> Adventures</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="package.html" class="active">Tour Packages</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-secondary">Login</a>
+            <a href="register.html" class="btn-primary">Register</a>
+        </div>
+    </header>
+
+    <main class="tour-container">
+        
+        <h1 class="tour-main-title">Cultural Journey Tour (5 Days, 4 Nights)</h1>
+        
+        <div class="tour-layout-grid">
+            
+            <div class="tour-content-left">
+                
+                <div class="tour-image-container">
+                    <span class="location-marker">📍 Ancient Cultural Triangle (Sigiriya / Kandy)</span>
+                    <div class="tour-hero-placeholder-image cultural-hero-bg">
+                        <p>🗿 Explore ancient rock fortresses, sacred temple shrines, and traditional heritage trails</p>
+                    </div>
+                </div>
+
+                <div class="info-card-block">
+                    <h3>About this Tour</h3>
+                    <p class="tour-description">
+                        Immerse yourself in the rich history and deep heritage of Sri Lanka's cultural heartland. This premium, 
+                        pre-vetted 5-day journey takes you deep into the heart of ancient kingdoms. Wander through centuries-old ruins, 
+                        marvel at structural wonders like the Sigiriya Rock Citadel, and witness beautiful traditional dance performances. 
+                        Curated specially for history enthusiasts, photographers, and travelers seeking an authentic spiritual exploration.
+                    </p>
+                    
+                    <div class="inclusion-notes-box">
+                        <strong>Inclusion Notes:</strong> Daily traditional buffet breakfasts, certified English-speaking heritage guides, 
+                        all archaeological site entry passes, and air-conditioned luxury transport transfers are fully included.
+                    </div>
+                </div>
+
+                <div class="info-card-block">
+                    <h3>Detailed Itinerary</h3>
+                    
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 1: Arrival & Historic Polonnaruwa Ancient Ruins Exploration</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 2: Morning Sigiriya Citadel Climb & Traditional Village Lunch</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 3: Dambulla Cave Complex Tour & Journey to Hill Country Capital (Kandy)</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 4: Sacred Temple of the Tooth Relic & Royal Botanical Gardens Walk</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-accordion-item">
+                        <div class="accordion-header">
+                            <span>Day 5: Traditional Kandyan Dance Showcase, Spice Garden Tour & Departure</span>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tour-sidebar-right">
+                <div class="booking-configurator-card">
+                    
+                    <h3>Booking Configurator</h3>
+                    
+                    <form id="culturalBookingForm" class="booking-form-layout">
+                        
+                        <div class="booking-field-group">
+                            <label for="travelDate">Travel Date</label>
+                            <input type="date" id="travelDate" required>
+                        </div>
+
+                        <div class="booking-field-group">
+                            <label for="numGuests">Number of Guests</label>
+                            <input type="number" id="numGuests" min="1" value="2" oninput="calculateTotal()" required>
+                        </div>
+
+                        <div class="booking-field-group">
+                            <label>Accommodation Tier</label>
+                            
+                            <label class="radio-label-container">
+                                <input type="radio" name="accommodationTier" value="0" checked onchange="calculateTotal()">
+                                <span>Standard Heritage Inn (Included)</span>
+                            </label>
+                            
+                            <label class="radio-label-container">
+                                <input type="radio" name="accommodationTier" value="60" onchange="calculateTotal()">
+                                <span>5-Star Luxury Boutique (+$60 / person)</span>
+                            </label>
+                        </div>
+
+                        <div class="price-breakdown-row">
+                            <span>Base Price (per person):</span>
+                            <span class="price-calc-value">$150.00</span>
+                        </div>
+
+                        <div class="total-price-row">
+                            <span>Total Price:</span>
+                            <span class="final-calculated-sum" id="totalPriceDisplay">$300.00</span>
+                        </div>
+
+                        <button type="submit" class="btn-book-now">Proceed to Payment</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>&copy; 2026 GlobeTrek Adventures. All Rights Reserved.</p>
+        </div>
+        <div class="footer-badges">
+            <span>🛡️ SSL Secured Transactions</span>
+            <span>♿ WCAG Accessible Layout</span>
+        </div>
+    </footer>
+
+    <script>
+        function calculateTotal() {
+            // Base package pricing entry set precisely to $150
+            const basePrice = 150; 
+            const guestsInput = document.getElementById('numGuests').value;
+            const numGuests = parseInt(guestsInput) || 0;
+            
+            // Checking active choice state on room tier surcharges
+            const tiers = document.getElementsByName('accommodationTier');
+            let extraCharge = 0;
+            for (let i = 0; i < tiers.length; i++) {
+                if (tiers[i].checked) {
+                    extraCharge = parseInt(tiers[i].value);
+                    break;
+                }
+            }
+            
+            // Formula Execution 
+            const finalTotal = (basePrice + extraCharge) * numGuests;
+            
+            // Printing result string dynamically back to visual display wrapper
+            document.getElementById('totalPriceDisplay').innerText = "$" + finalTotal.toFixed(2);
+        }
+    </script>
+    <script>
+    document.querySelector('.btn-book-now').addEventListener('click', function(event){
+        event.preventDefault();
+        const paymentTotal = document.getElementById('totalPriceDisplay').textContent;
+        alert('Securely initializing checkout gateway for paymentTotal}. Please wait..');
+        this.closest('form').submit();
+    });
+   </script>
+</body>
+</html>
