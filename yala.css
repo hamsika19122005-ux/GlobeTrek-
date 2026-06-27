@@ -1,0 +1,231 @@
+/* --- Global Variables matching Tour Branding --- */
+:root {
+  --primary-dark: #114232;
+  --primary-accent: #00745b;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #f4f7f6;
+  --card-shadow: 0 4px 25px rgba(0,0,0,0.06);
+}
+
+Body {
+  Font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+  Background-color: var(--bg-light);
+  Color: var(--text-dark);
+  Margin: 0;
+  Padding: 40px 15px;
+}
+
+.details-container {
+  Max-width: 1200px;
+  Margin: 0 auto;
+}
+
+.back-link {
+  Display: inline-flex;
+  Align-items: center;
+  Gap: 8px;
+  Color: var(--primary-accent);
+  Text-decoration: none;
+  Font-weight: 600;
+  Margin-bottom: 25px;
+}
+
+/* Two Column Layout Base */
+.details-grid {
+  Display: grid;
+  Grid-template-columns: 420px 1fr;
+  Gap: 40px;
+  Background: #ffffff;
+  Padding: 35px;
+  Border-radius: 16px;
+  Box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 900px) {
+  .details-grid {
+    Grid-template-columns: 1fr;
+  }
+}
+
+/* --- Left Sidebar Layout --- */
+.image-wrapper {
+  Position: relative;
+  Width: 100%;
+  Height: 320px;
+}
+
+.image-wrapper img {
+  Width: 100%;
+  Height: 100%;
+  Object-fit: cover;
+  Border-radius: 12px;
+}
+
+.price-tag {
+  Position: absolute;
+  Top: 15px;
+  Right: 15px;
+  Background-color: var(--primary-accent);
+  Color: white;
+  Padding: 6px 14px;
+  Font-weight: bold;
+  Border-radius: 20px;
+}
+
+.quick-facts-box {
+  Background-color: #fafafa;
+  Border: 1px solid #eeeeee;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-top: 25px;
+}
+
+.quick-facts-box h3 {
+  Margin-top: 0;
+  Color: var(--primary-dark);
+  Border-bottom: 2px solid #e0e0e0;
+  Padding-bottom: 8px;
+}
+
+.fact-item {
+  Display: flex;
+  Justify-content: space-between;
+  Padding: 10px 0;
+  Border-bottom: 1px dashed #dddddd;
+  Font-size: 0.95rem;
+}
+
+.fact-item:last-child {
+  Border: none;
+}
+
+.fact-label {
+  Color: var(--text-light);
+  Font-weight: 500;
+}
+
+.fact-value {
+  Color: var(--text-dark);
+  Font-weight: 600;
+}
+
+/* --- Right Side Content Styling --- */
+.package-title {
+  Color: var(--primary-dark);
+  Font-size: 2.4rem;
+  Margin: 0 0 10px 0;
+}
+
+.meta-info-row {
+  Display: flex;
+  Gap: 20px;
+  Color: var(--text-light);
+  Margin-bottom: 20px;
+}
+
+.text-gold { color: #ffb100; }
+
+.package-summary {
+  Font-size: 1.05rem;
+  Line-height: 1.6;
+  Color: var(--text-light);
+}
+
+.divider {
+  Border: 0;
+  Height: 1px;
+  Background-color: #ececec;
+  Margin: 30px 0;
+}
+
+.section-title {
+  Color: var(--primary-dark);
+  Font-size: 1.4rem;
+  Margin-bottom: 15px;
+}
+
+/* Itinerary Timeline Elements */
+.itinerary-timeline {
+  Border-left: 3px solid #e2ece9;
+  Padding-left: 20px;
+  Margin-left: 10px;
+}
+
+.timeline-step {
+  Position: relative;
+  Margin-bottom: 20px;
+}
+
+.timeline-step::before {
+  Content: ‘’;
+  Position: absolute;
+  Left: -28px;
+  Top: 4px;
+  Width: 12px;
+  Height: 12px;
+  Background-color: var(--primary-accent);
+  Border-radius: 50%;
+  Border: 3px solid white;
+  Box-shadow: 0 0 0 2px var(--primary-accent);
+}
+
+.timeline-step h4 {
+  Margin: 0 0 5px 0;
+  Color: var(--text-dark);
+}
+
+.timeline-step p {
+  Margin: 0;
+  Color: var(--text-light);
+  Font-size: 0.95rem;
+  Line-height: 1.4;
+}
+
+/* Shared Lists Formatting */
+.features-split {
+  Display: grid;
+  Grid-template-columns: 1fr 1fr;
+  Gap: 20px;
+  Margin-bottom: 35px;
+}
+
+@media (max-width: 600px) {
+  .features-split { grid-template-columns: 1fr; }
+}
+
+.features-list {
+  List-style: none;
+  Padding: 0;
+  Margin: 0;
+}
+
+.features-list li {
+  Display: flex;
+  Align-items: center;
+  Gap: 10px;
+  Margin-bottom: 12px;
+  Font-size: 0.95rem;
+}
+
+.included li i { color: #2e7d32; }
+.excluded li i { color: #c62828; }
+
+/* Main CTA Action Button */
+.btn-primary-action {
+  Background-color: var(--primary-accent);
+  Color: white;
+  Border: none;
+  Width: 100%;
+  Padding: 16px;
+  Font-size: 1.15rem;
+  Font-weight: bold;
+  Border-radius: 8px;
+  Cursor: pointer;
+  Transition: background-color 0.2s;
+}
+
+.btn-primary-action:hover {
+  Background-color: var(--primary-dark);
+}
+

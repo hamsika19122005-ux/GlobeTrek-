@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Reports | GlobeTrek Admin Portal</title>
+    <link rel="stylesheet" href="st5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-panel-body">
+
+    <!-- Top Admin Header Bar (Matches Master Template Layout) -->
+    <header class="admin-top-bar">
+        <div class="admin-logo">
+            <h2>GlobeTrek <span>Admin Portal</span></h2>
+        </div>
+        <div class="admin-user-profile">
+            <span class="role-badge">Role: Administrator</span>
+        </div>
+    </header>
+
+    <!-- Main Workspace Layout Grid -->
+    <div class="admin-workspace">
+        
+        <!-- SIDEBAR NAVIGATION PANEL (Matches Master Dashboard) -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item">
+                    <span class="menu-icon">📊</span> Dashboard Home
+                </a>
+                <a href="stmanage.html" class="menu-item">
+                    <span class="menu-icon">📦</span> Manage Packages
+                </a>
+                <a href="stsystem.html" class="menu-item">
+                    <span class="menu-icon">🛒</span> System Bookings
+                </a>
+                <a href="stquery.html" class="menu-item">
+                    <span class="menu-icon">💬</span> User Queries <span class="badge-count">9</span>
+                </a>
+                <a href="staccount.html" class="menu-item">
+                    <span class="menu-icon">👥</span> Staff Accounts
+                </a>
+                <a href="streport.html" class="menu-item active">
+                    <span class="menu-icon">📈</span> Generate Reports
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-link">🚪 Secure Logout</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT CONTAINER AREA -->
+        <main class="admin-main-content">
+            
+            <!-- Navigation Action Row containing the Back Button -->
+            <div class="admin-navigation-row">
+                <a href="admin.html" class="btn-back-dashboard">
+                    <span class="back-arrow">←</span> Back to Dashboard
+                </a>
+            </div>
+
+            <!-- Configuration Options Selection Panel -->
+            <div class="management-workspace-card">
+                <div class="card-title-header">
+                    <h3>Analytics & Operational Report Engine</h3>
+                    <p>Select filtering scopes to consolidate sales metrics, customer volume, and travel trends.</p>
+                </div>
+
+                <!-- Report Engine Input Filter Form -->
+                <form class="report-filter-grid">
+                    <div class="filter-field-group">
+                        <label for="reportType">Select Report Type</label>
+                        <select id="reportType" class="report-select-input">
+                            <option value="financial">Financial Revenue Ledger</option>
+                            <option value="packages">Tour Package Popularity Summary</option>
+                            <option value="staff">Staff Performance & Fields Logs</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-field-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" class="report-date-input" value="2026-01-01">
+                    </div>
+
+                    <div class="filter-field-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" class="report-date-input" value="2026-06-11">
+                    </div>
+
+                    <div class="filter-field-group action-align-end">
+                        <button type="button" class="btn-compile-report">Compile Preview</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Pre-Export Live Data Summary Grid -->
+            <div class="management-workspace-card">
+                <div class="report-preview-header">
+                    <h4>Compiled Summary Matrix Preview (Jan 2026 - Present)</h4>
+                    <div class="export-actions-wrapper">
+                        <button class="btn-export-pdf">📄 Export as PDF</button>
+                        <button class="btn-export-csv">📊 Export CSV Sheet</button>
+                    </div>
+                </div>
+
+                <!-- Summary Data Row Cards -->
+                <div class="report-metrics-strip">
+                    <div class="report-metric-box">
+                        <span>Total Revenue Generated</span>
+                        <strong>$12,450.00</strong>
+                    </div>
+                    <div class="report-metric-box">
+                        <span>Total Ticket Clearances</span>
+                        <strong>142 Bookings</strong>
+                    </div>
+                    <div class="report-metric-box">
+                        <span>Top Grossing Package</span>
+                        <strong>Ella Nature Explorer</strong>
+                    </div>
+                </div>
+
+                <!-- Data Preview Snapshot Table Matrix -->
+                <div class="table-responsive-wrapper">
+                    <table class="inventory-data-table report-preview-table">
+                        <thead>
+                            <tr>
+                                <th>Category Scope</th>
+                                <th>Units Cleared</th>
+                                <th>Gross Revenue</th>
+                                <th>Cancellation Ratio</th>
+                                <th>System Net Margin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hill Country Packages</strong></td>
+                                <td>64 Bookings</td>
+                                <td>$7,680.00</td>
+                                <td>1.2%</td>
+                                <td class="profit-text">+$6,912.00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Coastal Area Packages</strong></td>
+                                <td>48 Bookings</td>
+                                <td>$4,560.00</td>
+                                <td>2.5%</td>
+                                <td class="profit-text">+$4,104.00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Northern Peninsula Packages</strong></td>
+                                <td>30 Bookings</td>
+                                <td>$4,500.00</td>
+                                <td>0.0%</td>
+                                <td class="profit-text">+$4,050.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

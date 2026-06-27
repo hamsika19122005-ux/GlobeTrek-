@@ -1,0 +1,631 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & STYLES (Based on UI Justification Matrix)
+   ========================================================================== */
+:root {
+    --primary-color: #005F73;      /* Deep Teal: Trust, safety, security */
+    --secondary-color: #EE9B00;    /* Warm Amber: Interactive dynamic action CTAs */
+    --text-color: #2B2D42;         /* Charcoal Grey: Accessible readability without eye strain */
+    --bg-light: #F8F9FA;           /* Off-White Layout background surface */
+    --white: #FFFFFF;
+    --transition-speed: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION PATTERNS
+   ========================================================================== */
+.main-header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.logo h2 span {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 1.5rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
+.auth-buttons .btn-secondary {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 1.2rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.auth-buttons .btn-primary {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.auth-buttons .btn-primary:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   3. HERO REGION & CONTROLLER SEARCH STRIP
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    /* Simulated premium atmospheric destination photo background placeholder */
+    background: url('images/Browse.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Ensures contrast accessibility for header text */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Search widget strip component layout styling */
+.search-widget {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 1.2rem;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.search-group select {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.85rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.search-btn:hover {
+    background-color: #d68a00;
+}
+
+/* ==========================================================================
+   4. DYNAMIC TOUR PACKAGES SHOWCASE CONTENT GRID
+   ========================================================================== */
+.packages-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content cards placeholder stock images */
+.bg-ella { background-image: url('images/Ella.png'); }
+.bg-negombo { background-image: url('images/Coastal.png'); }
+.bg-jaffna { background-image: url('images/Journey\ .png'); }
+.bg-trinco { background-image: url('images/Nilaveli.png'); }
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.package-price span {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.package-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    height: 70px; /* Forces equal spacing limits for description layouts */
+    overflow: hidden;
+}
+
+.btn-view-detail {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-view-detail:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   5. FOOTER ARCHITECTURE Layout
+   ========================================================================== */
+.main-footer {
+    background-color: var(--text-color);
+    color: #ced4da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.footer-badges span {
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (Ensuring Clean Mobile/Tablet Reflow)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .search-widget {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-widget {
+        grid-template-columns: 1fr;
+    }
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .main-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+/*//////////////////////////////////*/
+
+/* ==========================================================================
+   11. TOUR PACKAGES DIRECTORY CATALOG SPLIT WORKSPACE
+   ========================================================================== */
+.packages-hero {
+    position: relative;
+    height: 30vh; /* Shorter accent banner space context */
+    background: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.packages-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.packages-hero-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Catalog Structure Grid Definitions */
+.catalog-layout-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 3fr 9fr; /* 25% filter sidebar, 75% display grid results */
+    gap: 2.5rem;
+}
+
+/* Sidebar Facet Filters Component Layout */
+.filter-box-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    position: sticky;
+    top: 100px; /* Accounts for floating fixed navbar headers */
+}
+
+.filter-box-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #EDF2F7;
+}
+
+.filter-group {
+    margin-bottom: 1.8rem;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #718096;
+    margin-bottom: 0.6rem;
+}
+
+.checkbox-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cb-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    color: #4A5568;
+    cursor: pointer;
+}
+
+.cb-label input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    width: 16px;
+    height: 16px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    outline: none;
+}
+
+/* Style Range Track Selectors */
+.slider-control {
+    width: 100%;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.budget-slider-output {
+    display: block;
+    margin-top: 0.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.btn-reset-filters {
+    width: 100%;
+    background-color: transparent;
+    color: #718096;
+    border: 1px solid #CBD5E0;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.btn-reset-filters:hover {
+    background-color: #F7FAFC;
+    color: var(--text-color);
+}
+
+/* Main Display Directory Core Components */
+.results-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.results-counter {
+    font-size: 0.95rem;
+    color: #4A5568;
+}
+
+.results-sorter {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Internal Dynamic Data Package Cards Grid */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2-column structure fits sidebar layouts cleanly */
+    gap: 1.8rem;
+}
+
+.catalog-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    border: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.catalog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cat-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.meta-tag {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    background-color: rgba(0, 95, 115, 0.9); /* Opaque Deep Teal Overlay block */
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.cat-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.meta-location {
+    font-size: 0.8rem;
+    color: #718096;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.cat-content h3 {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 0.6rem;
+}
+
+.cat-desc {
+    font-size: 0.9rem;
+    color: #4A5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    flex: 1; /* Pushes the card footer row evenly along the bottom edge */
+}
+
+.cat-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #EDF2F7;
+    padding-top: 0.8rem;
+}
+
+.cat-price {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.cat-price span {
+    font-size: 0.8rem;
+    color: #718096;
+    font-weight: 400;
+}
+
+.btn-cat-detail {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-cat-detail:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   12. MOBILE REFITIING OVERRIDES FOR DIRECTORY VIEWS
+   ========================================================================== */
+@media (max-width: 992px) {
+    .catalog-layout-container {
+        grid-template-columns: 1fr; /* Stack sidebar over results on tablet grids */
+        gap: 2rem;
+    }
+    .filter-box-card {
+        position: static; /* Unhinges floating fixed alignments */
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: 1fr; /* Pure linear stack flow on phone viewports */
+    }
+}

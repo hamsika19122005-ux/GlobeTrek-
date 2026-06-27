@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Bookings | GlobeTrek Admin Portal</title>
+    <link rel="stylesheet" href="st2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700&family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-panel-body">
+
+    <header class="admin-top-bar">
+        <div class="admin-logo">
+            <h2>GlobeTrek <span>Admin Portal</span></h2>
+        </div>
+        <div class="admin-user-profile">
+            <span class="role-badge">Role: Administrator</span>
+        </div>
+    </header>
+
+    <div class="admin-workspace">
+        
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item">
+                    <span class="menu-icon">📊</span> Dashboard Home
+                </a>
+                <a href="stmanage.html" class="menu-item">
+                    <span class="menu-icon">📦</span> Manage Packages
+                </a>
+                <a href="stsystem.html" class="menu-item active">
+                    <span class="menu-icon">🛒</span> System Bookings
+                </a>
+                <a href="stquery.html" class="menu-item">
+                    <span class="menu-icon">💬</span> User Queries <span class="badge-count">9</span>
+                </a>
+                <a href="staccount.html" class="menu-item">
+                    <span class="menu-icon">👥</span> Staff Accounts
+                </a>
+                <a href="streport.html" class="menu-item">
+                    <span class="menu-icon">📈</span> Generate Reports
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-link">🚪 Secure Logout</a>
+            </div>
+        </aside>
+
+        <main class="admin-main-content">
+            
+            <div class="admin-navigation-row">
+                <a href="admin.html" class="btn-back-dashboard">
+                    <span class="back-arrow">←</span> Back to Dashboard
+                </a>
+                <div class="table-utility-filters">
+                    <input type="text" placeholder="Search Customer or ID..." class="table-search-input">
+                </div>
+            </div>
+
+            <div class="management-workspace-card">
+                <div class="card-title-header">
+                    <h3>Customer Reservations & Transaction Logs</h3>
+                    <p>Track incoming customer orders, manage payment status parameters, and review guest manifests.</p>
+                </div>
+
+                <div class="table-responsive-wrapper">
+                    <table class="inventory-data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Lead Customer</th>
+                                <th>Chosen Package</th>
+                                <th>Travel Date</th>
+                                <th>Guests</th>
+                                <th>Total Settlement</th>
+                                <th>Payment</th>
+                                <th>Tour Status</th>
+                                <th style="text-align: center;">Manifest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#GT-9081</td>
+                                <td><strong>Ananthan K.</strong></td>
+                                <td>Ella Nature Explorer</td>
+                                <td>18/06/2026</td>
+                                <td style="text-align: center;">2</td>
+                                <td class="table-price">$240.00</td>
+                                <td><span class="status-indicator active-tag">PAID</span></td>
+                                <td><span class="tour-status upcoming-tag">Upcoming</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#GT-9082</td>
+                                <td><strong>Sarah Jenkins</strong></td>
+                                <td>Coastal Escape 3-Day</td>
+                                <td>24/06/2026</td>
+                                <td style="text-align: center;">4</td>
+                                <td class="table-price">$380.00</td>
+                                <td><span class="status-indicator draft-tag">PENDING</span></td>
+                                <td><span class="tour-status upcoming-tag">Upcoming</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#GT-8944</td>
+                                <td><strong>Ravin Thilagar</strong></td>
+                                <td>Cultural Journey 5-Day</td>
+                                <td>02/06/2026</td>
+                                <td style="text-align: center;">1</td>
+                                <td class="table-price">$150.00</td>
+                                <td><span class="status-indicator active-tag">PAID</span></td>
+                                <td><span class="tour-status progress-tag">In Progress</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#GT-8812</td>
+                                <td><strong>Michael Gomez</strong></td>
+                                <td>Nilaveli Beach Respite</td>
+                                <td>28/05/2026</td>
+                                <td style="text-align: center;">3</td>
+                                <td class="table-price">$330.00</td>
+                                <td><span class="status-indicator active-tag">PAID</span></td>
+                                <td><span class="tour-status complete-tag">Completed</span></td>
+                                <td class="actions-cell-buttons">
+                                    <button class="btn-table-view">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

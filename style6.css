@@ -1,0 +1,570 @@
+/* ==========================================================================*/
+/* ==========================================================================
+   1. GLOBAL VARIABLES & STYLES (Based on UI Justification Matrix)
+   ========================================================================== */
+:root {
+    --primary-color: #005F73;      /* Deep Teal: Trust, safety, security */
+    --secondary-color: #EE9B00;    /* Warm Amber: Interactive dynamic action CTAs */
+    --text-color: #2B2D42;         /* Charcoal Grey: Accessible readability without eye strain */
+    --bg-light: #F8F9FA;           /* Off-White Layout background surface */
+    --white: #FFFFFF;
+    --transition-speed: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION PATTERNS
+   ========================================================================== */
+.main-header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.logo h2 span {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 1.5rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
+.auth-buttons .btn-secondary {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 1.2rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.auth-buttons .btn-primary {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.auth-buttons .btn-primary:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   3. HERO REGION & CONTROLLER SEARCH STRIP
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    /* Simulated premium atmospheric destination photo background placeholder */
+    background: url('https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Ensures contrast accessibility for header text */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Search widget strip component layout styling */
+.search-widget {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 1.2rem;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.search-group select {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.85rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.search-btn:hover {
+    background-color: #d68a00;
+}
+
+/* ==========================================================================
+   4. DYNAMIC TOUR PACKAGES SHOWCASE CONTENT GRID
+   ========================================================================== */
+.packages-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content cards placeholder stock images */
+.bg-ella { background-image: url('https://images.unsplash.com/photo-1588598126244-ffddb97b0ee3?auto=format&fit=crop&w=400&q=80'); }
+.bg-negombo { background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80'); }
+.bg-jaffna { background-image: url('https://images.unsplash.com/photo-1568241322289-43c3d526e855?auto=format&fit=crop&w=400&q=80'); }
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.package-price span {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.package-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    height: 70px; /* Forces equal spacing limits for description layouts */
+    overflow: hidden;
+}
+
+.btn-view-detail {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-view-detail:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   5. FOOTER ARCHITECTURE Layout
+   ========================================================================== */
+.main-footer {
+    background-color: var(--text-color);
+    color: #ced4da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.footer-badges span {
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (Ensuring Clean Mobile/Tablet Reflow)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .search-widget {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-widget {
+        grid-template-columns: 1fr;
+    }
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .main-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+  /* 14. SECURE ROLE-BASED AUTHENTICATION GATEWAY STYLING
+   ========================================================================== */
+.auth-page-body {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); /* Smooth gray ambient workspace backdrop layout */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Auth Center Card Positioning Alignment */
+.auth-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.auth-card {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 460px;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.auth-card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-card-header h2 {
+    color: var(--primary-color); /* Deep Teal theme priority */
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-card-header p {
+    color: #64748B;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+/* Core Intake Fields Styles */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.auth-field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-field-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #4A5568;
+    margin-bottom: 0.4rem;
+}
+
+.password-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-forgot-pass {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-forgot-pass:hover {
+    text-decoration: underline;
+}
+
+/* Integrated Icon Input Box Structural Wrappers */
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field-icon {
+    position: absolute;
+    left: 0.8rem;
+    font-size: 1rem;
+    color: #94A3B8;
+    user-select: none;
+    pointer-events: none;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.4rem; /* Generates padding space context clear of inline icons */
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    outline: none;
+    transition: border-color var(--transition-speed);
+}
+
+.input-with-icon input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Password Masking Controls */
+.btn-toggle-mask {
+    position: absolute;
+    right: 0.8rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #64748B;
+    padding: 0.2rem;
+}
+
+/* Optional Parameters Area */
+.auth-meta-options {
+    margin: 0.2rem 0;
+}
+
+.remember-me-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.88rem;
+    color: #4A5568;
+}
+
+.remember-me-checkbox input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    width: 16px;
+    height: 16px;
+}
+
+/* Submission CTA Action Controls */
+.btn-submit-auth {
+    width: 100%;
+    background-color: var(--secondary-color); /* Amber Action conversion color */
+    color: var(--white);
+    border: none;
+    padding: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(238, 155, 0, 0.15);
+    transition: background-color var(--transition-speed);
+}
+
+.btn-submit-auth:hover {
+    background-color: #d68a00;
+}
+
+/* Authentication Error System Warnings */
+.auth-error-banner {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FCA5A5;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Card Onboarding Links Footer Area */
+.auth-card-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E2E8F0;
+}
+
+.auth-card-footer p {
+    font-size: 0.9rem;
+    color: #4A5568;
+    margin-bottom: 0.5rem;
+}
+
+.auth-card-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-card-footer a:hover {
+    text-decoration: underline;
+}
+
+.crypto-notice {
+    font-size: 0.75rem !important;
+    color: #94A3B8 !important;
+    margin-top: 1rem;
+}
+
+/* Header Highlight Retention Rule */
+.active-auth {
+    background-color: rgba(0, 95, 115, 0.1);
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Mobile Screen Breakpoint Optimization */
+@media (max-width: 520px) {
+    .auth-card {
+        padding: 1.8rem;
+    }
+}

@@ -1,0 +1,1020 @@
+/* ==========================================================================*/
+/* ==========================================================================
+   1. GLOBAL VARIABLES & STYLES (Based on UI Justification Matrix)
+   ========================================================================== */
+:root {
+    --primary-color: #005F73;      /* Deep Teal: Trust, safety, security */
+    --secondary-color: #EE9B00;    /* Warm Amber: Interactive dynamic action CTAs */
+    --text-color: #2B2D42;         /* Charcoal Grey: Accessible readability without eye strain */
+    --bg-light: #F8F9FA;           /* Off-White Layout background surface */
+    --white: #FFFFFF;
+    --transition-speed: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION PATTERNS
+   ========================================================================== */
+.main-header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.logo h2 span {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 1.5rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
+.auth-buttons .btn-secondary {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 1.2rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.auth-buttons .btn-primary {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.auth-buttons .btn-primary:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   3. HERO REGION & CONTROLLER SEARCH STRIP
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    /* Simulated premium atmospheric destination photo background placeholder */
+    background: url('https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Ensures contrast accessibility for header text */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Search widget strip component layout styling */
+.search-widget {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 1.2rem;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.search-group select {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.85rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.search-btn:hover {
+    background-color: #d68a00;
+}
+
+/* ==========================================================================
+   4. DYNAMIC TOUR PACKAGES SHOWCASE CONTENT GRID
+   ========================================================================== */
+.packages-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content cards placeholder stock images */
+.bg-ella { background-image: url('https://images.unsplash.com/photo-1588598126244-ffddb97b0ee3?auto=format&fit=crop&w=400&q=80'); }
+.bg-negombo { background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80'); }
+.bg-jaffna { background-image: url('https://images.unsplash.com/photo-1568241322289-43c3d526e855?auto=format&fit=crop&w=400&q=80'); }
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.package-price span {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.package-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    height: 70px; /* Forces equal spacing limits for description layouts */
+    overflow: hidden;
+}
+
+.btn-view-detail {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-view-detail:hover {
+    background-color: #004d5e;
+}
+
+/* ==========================================================================
+   5. FOOTER ARCHITECTURE Layout
+   ========================================================================== */
+.main-footer {
+    background-color: var(--text-color);
+    color: #ced4da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.footer-badges span {
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (Ensuring Clean Mobile/Tablet Reflow)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .search-widget {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-widget {
+        grid-template-columns: 1fr;
+    }
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .main-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+   
+
+
+
+
+
+
+
+
+
+/*7. CUSTOMER PACKAGE CUSTOMIZER & DETAIL SPLIT LAYOUT
+   ========================================================================== */
+.detail-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.back-navigation {
+    margin-bottom: 1.5rem;
+}
+
+.back-navigation a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.back-navigation a:hover {
+    color: var(--text-color);
+}
+
+.package-title {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* Flexbox Grid Structure for Split Screen View */
+.split-layout {
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Media & Overview Block Definitions */
+.media-gallery img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.package-overview {
+    margin: 2rem 0;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.package-overview h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.inclusion-note {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #E0F2F1;
+    border-left: 4px solid var(--primary-color);
+    font-size: 0.95rem;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Itinerary Collapsible Accordion Element UI */
+.itinerary-accordion h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.accordion-item {
+    background: var(--white);
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--white);
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color var(--transition-speed);
+}
+
+.accordion-header:hover {
+    background-color: #F1F5F9;
+}
+
+.accordion-header .icon {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    transition: transform var(--transition-speed);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.2rem;
+    transition: max-height var(--transition-speed) ease-out, padding var(--transition-speed);
+    background-color: #FAFAFA;
+    color: #4A5568;
+    font-size: 0.95rem;
+}
+
+/* Active State rules triggers via standard JavaScript click payload */
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Provides space for standard description boxes */
+    padding: 1.2rem;
+    border-top: 1px solid #E2E8F0;
+}
+
+.accordion-item.active .accordion-header {
+    background-color: #F8FAFC;
+}
+
+.accordion-item.active .accordion-header .icon {
+    transform: rotate(45deg);
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   8. STICKY RIGHT COLUMN CONFIGURATOR CARD
+   ========================================================================== */
+.sidebar-column {
+    position: sticky;
+    top: 100px; /* Accounts for main fixed header menu space */
+}
+
+.booking-configurator {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #E2E8F0;
+}
+
+.booking-configurator h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #EDF2F7;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="date"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    outline: none;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-transform: none !important;
+    font-weight: 400 !important;
+    color: var(--text-color) !important;
+}
+
+.radio-label input {
+    accent-color: var(--primary-color);
+    width: 18px;
+    height: 18px;
+}
+
+/* Price Calculator Presentation Panel */
+.price-breakdown {
+    background-color: var(--bg-light);
+    padding: 1.2rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #4A5568;
+}
+
+.price-breakdown hr {
+    border: 0;
+    border-top: 1px solid #E2E8F0;
+    margin: 0.8rem 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+#displayTotal {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-checkout {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(238, 155, 0, 0.2);
+    transition: background-color var(--transition-speed), transform 0.1s;
+}
+
+.btn-checkout:hover {
+    background-color: #d68a00;
+}
+
+.btn-checkout:active {
+    transform: scale(0.98);
+}
+
+.security-stamp {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 1rem;
+}
+
+/* Responsive Overrides for Media Query Viewports */
+@media (max-width: 992px) {
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .sidebar-column {
+        position: static; /* Disables sticky attachment on phone displays */
+    }
+    .media-gallery img {
+        height: 320px;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////*/
+
+/* ==========================================================================
+   9. COMBINED INTERNAL STAFF & ADMIN DASHBOARD ARCHITECTURE
+   ========================================================================== */
+.dashboard-body {
+    background-color: #F1F5F9; /* Slate grey tint for deep screen work contrast */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Administrative Top App Bar */
+.dashboard-header {
+    background-color: var(--primary-color); /* Deep Teal */
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.db-logo h2 {
+    font-size: 1.3rem;
+}
+
+.db-logo h2 span {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #A8DADC;
+}
+
+.db-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-role-tag {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.user-avatar {
+    font-size: 1.2rem;
+}
+
+/* Full Width Split Workspace Layout */
+.dashboard-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Sidebar Panel Rules */
+.dashboard-sidebar {
+    width: 260px;
+    background-color: var(--text-color); /* Charcoal Grey */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #94A3B8;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+}
+
+.nav-item.active {
+    border-left: 4px solid var(--secondary-color); /* Warm Amber strip emphasis */
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-icon {
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.badge-count {
+    background-color: #E63946;
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #334155;
+    padding-top: 1rem;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F87171;
+    padding: 0.9rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-logout:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Main Dashboard Workspace Panel */
+.dashboard-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* KPI Overview Grid Components */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #E2E8F0;
+}
+
+.metric-title {
+    font-size: 0.85rem;
+    color: #64748B;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.metric-trend {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.metric-trend.up { color: #10B981; }
+.metric-trend.priority { color: #EF4444; font-weight: 600; }
+
+.alert-card {
+    border-left: 4px solid #EF4444;
+}
+
+/* High-Density Administrative Tabular Grid Layout */
+.data-workspace {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #E2E8F0;
+}
+
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.workspace-header h3 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.btn-add-package {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-add-package:hover {
+    background-color: #004d5e;
+}
+
+/* Relational Table Styles */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.data-table th {
+    background-color: #F8FAFC;
+    color: #64748B;
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 2px solid #E2E8F0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #E2E8F0;
+    color: #334155;
+}
+
+.data-table tbody tr:hover {
+    background-color: #F8FAFC;
+}
+
+.table-price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Access Control Status Pills */
+.status-pill {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.active-pill { background-color: #D1FAE5; color: #065F46; }
+.draft-pill { background-color: #FEF3C7; color: #92400E; }
+
+/* Table Operations Interface Controls */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-table-edit, .btn-table-del {
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-table-edit {
+    background-color: #E2E8F0;
+    color: var(--text-color);
+}
+
+.btn-table-edit:hover { background-color: #CBD5E1; }
+
+.btn-table-del {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.btn-table-del:hover { background-color: #FCA5A5; }
+
+/* Mobile Viewport Reflow Rules */
+@media (max-width: 992px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .dashboard-container {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .dashboard-sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .dashboard-body {
+        overflow: auto;
+        height: auto;
+    }
+}
+
+
+/* ==========================================================================
+   BACK TO TOUR PACKAGES BUTTON STYLING
+   ========================================================================== */
+.admin-navigation-row {
+    Display: flex;
+    Justify-content: flex-start;
+    Align-items: center;
+    Margin-bottom: 0.5rem; /* Creates perfect spacing above the metrics cards */
+}
+
+.btn-back-packages {
+    Display: inline-flex;
+    Align-items: center;
+    Background-color: #FFFFFF;
+    Color: #0F4C5C; /* Matching your brand’s deep teal color */
+    Border: 1px solid #CBD5E1;
+    Padding: 0.65rem 1.2rem;
+    Font-size: 0.9rem;
+    Font-weight: 600;
+    Border-radius: 4px;
+    Text-decoration: none;
+    Box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    Transition: all 0.2s ease;
+}
+
+.btn-back-packages:hover {
+    Background-color: #F8FAFC;
+    Border-color: #0F4C5C;
+    Box-shadow: 0 2px 6px rgba(15, 76, 92, 0.1);
+}
+
+.back-arrow {
+    Margin-right: 0.6rem;
+    Font-weight: 700;
+    Transition: transform 0.2s ease;
+}
+
+.btn-back-packages:hover .back-arrow {
+    Transform: translateX(-3px); /* Interactive nudge animation on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
